@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { posts } from '../data/posts';
 import './BlogPostView.css';
+import RichContent from './RichContent';
 
 function BlogPostView() {
   const { id } = useParams();
@@ -35,7 +36,7 @@ function BlogPostView() {
           </div>
           {post.excerpt && <p className="post-excerpt">{post.excerpt}</p>}
         </div>
-        <div className="post-content" dangerouslySetInnerHTML={{ __html: post.content }} />
+        <RichContent html={post.content} />
       </article>
       <Link to="/" className="back-link-bottom">← Back to All Posts</Link>
     </div>

@@ -6,6 +6,11 @@ All notable changes to this blog project will be documented in this file.
 
 ### Added - 2025-10-17 00:05:00
 
+#### Rendering
+- Introduced `RichContent` component to sanitize and parse HTML to React
+- Replaced `dangerouslySetInnerHTML` in BlogPost and BlogPostView
+- Installed `dompurify` and `html-react-parser`
+
 #### Global Styles (`/src/index.css`)
 - Increased base line-height to 1.7 and font-size scaling on large screens
 - Smooth scrolling, improved link underline styles, better selection color

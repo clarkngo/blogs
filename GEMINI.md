@@ -42,6 +42,7 @@ When making changes:
   - `content`: Full post content in HTML format (string)
 - New posts should be added at the beginning of the array (newest first)
 - Include references section when applicable
+- Rendering: Use `RichContent` to render `content` (sanitized with DOMPurify and parsed to React). Do NOT use `dangerouslySetInnerHTML`.
 - **Tags Guidelines**:
   - Use 3-6 relevant tags per post
   - Use title case (e.g., "Web Development", "AI")

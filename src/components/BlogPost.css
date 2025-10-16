@@ -210,6 +210,11 @@
   background-color: var(--color-bg);
 }
 
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
 .post-content em {
   font-style: italic;
   color: var(--color-secondary);

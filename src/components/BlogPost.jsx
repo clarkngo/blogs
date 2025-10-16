@@ -1,4 +1,5 @@
 import './BlogPost.css';
+import RichContent from './RichContent';
 
 function BlogPost({ title, date, tags, excerpt, content }) {
   return (
@@ -17,7 +18,7 @@ function BlogPost({ title, date, tags, excerpt, content }) {
         </div>
         {excerpt && <p className="post-excerpt">{excerpt}</p>}
       </div>
-      <div className="post-content" dangerouslySetInnerHTML={{ __html: content }} />
+      <RichContent html={content} />
     </article>
   );
 }
