@@ -1,5 +1,7 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 import './BlogPost.css';
 
 export default function RichContent({ html }) {
@@ -10,7 +12,8 @@ export default function RichContent({ html }) {
   return (
     <div className="post-content">
       <ReactMarkdown 
-        remarkPlugins={[remarkGfm]}
+        remarkPlugins={[remarkGfm, remarkMath]}
+        rehypePlugins={[rehypeKatex]}
         components={{
           // Custom table rendering to add our post-table class
           table: ({node, ...props}) => <table className="post-table" {...props} />,

@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import siteIcon from './assets/mechanized_flame_wolf_head.png'
+import 'katex/dist/katex.min.css'
 
 // Dynamically set favicon so Vite handles correct base path on all hosts
 function ensureFavicon(href) {

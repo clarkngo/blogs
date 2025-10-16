@@ -7,16 +7,20 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "release": "npm run build && git add dist && (git diff --cached --quiet -- dist || git commit -m 'chore(dist): update build artifacts') && git push origin main"
   },
   "dependencies": {
     "dompurify": "^3.3.0",
     "html-react-parser": "^5.2.7",
+    "katex": "^0.16.25",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.9.4",
+    "rehype-katex": "^7.0.1",
     "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0",
     "vite-plugin-svgr": "^4.5.0"
   },
   "devDependencies": {
