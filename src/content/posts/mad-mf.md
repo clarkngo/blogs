@@ -3,6 +3,7 @@ id: 2
 title: "Modular AI-Driven Micro-Frontends (MAD-MF): A Decoupled Approach to Modern Web Development"
 date: "October 16, 2025"
 tags: ["Web Development", "Architecture", "AI", "React", "Vite", "Micro-Frontends"]
+author: "Clark Ngo"
 excerpt: "A novel web development methodology combining modern build tools, component-based UI libraries, and artificial intelligence into a highly decoupled, scalable, and efficient architecture."
 ---
 

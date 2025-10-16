@@ -35,6 +35,18 @@
   margin-bottom: var(--spacing-sm);
 }
 
+.post-byline {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: var(--color-secondary);
+  font-size: 0.95rem;
+}
+
+.post-author {
+  font-weight: 600;
+}
+
 .post-date {
   display: inline-block;
   font-size: 0.875rem;

@@ -25,7 +25,11 @@ function BlogPostView() {
         <div className="post-header">
           <h1 className="post-title">{post.title}</h1>
           <div className="post-meta">
-            <time className="post-date">{post.date}</time>
+            <div className="post-byline">
+              {post.author && <span className="post-author">By {post.author}</span>}
+              {post.author && ' · '}
+              <time className="post-date">{post.date}</time>
+            </div>
             {post.tags && post.tags.length > 0 && (
               <div className="post-tags">
                 {post.tags.map((tag, index) => (

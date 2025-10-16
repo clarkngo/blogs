@@ -3,6 +3,7 @@ id: 1
 title: "Revolutionizing Education: Why the Traditional Classroom is Broken and How AI is Building the Future"
 date: "October 16, 2025"
 tags: ["Education", "AI", "Innovation", "Future", "Learning"]
+author: "Clark Ngo"
 excerpt: "The traditional classroom model is fundamentally broken. Discover how AI-enabled mastery learning is revolutionizing education and creating students who love to learn."
 ---
 

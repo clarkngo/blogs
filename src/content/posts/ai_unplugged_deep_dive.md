@@ -3,6 +3,7 @@ id: 3
 title: "The K-12 AI Literacy Roadmap: From Unplugged to AI-Powered Creation"
 date: "October 16, 2025"
 tags: ["AI", "Education", "K-12", "Curriculum Design", "Computational Thinking", "AI Ethics", "Pedagogy", "Digital Transformation"]
+author: "Clark Ngo"
 excerpt: "A deep dive into a structured AI education roadmap: **AI Unplugged** (K-4) builds core concepts, **AI Infused** (K5-8) integrates tools into traditional subjects, and **AI Powered** (K9-12) fosters critical creation and ethical mastery. This post explores the pedagogy, goals, and logistics of this essential progression."
 ---
 

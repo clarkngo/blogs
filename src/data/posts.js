@@ -58,6 +58,7 @@ export const posts = [
     title: aiUnpluggedPost.frontmatter.title,
     date: aiUnpluggedPost.frontmatter.date,
     tags: aiUnpluggedPost.frontmatter.tags,
+    author: aiUnpluggedPost.frontmatter.author,
     excerpt: aiUnpluggedPost.frontmatter.excerpt,
     content: aiUnpluggedPost.content,
   },
@@ -66,6 +67,7 @@ export const posts = [
     title: madmfPost.frontmatter.title,
     date: madmfPost.frontmatter.date,
     tags: madmfPost.frontmatter.tags,
+    author: madmfPost.frontmatter.author,
     excerpt: madmfPost.frontmatter.excerpt,
     content: madmfPost.content,
   },
@@ -74,6 +76,7 @@ export const posts = [
     title: educationPost.frontmatter.title,
     date: educationPost.frontmatter.date,
     tags: educationPost.frontmatter.tags,
+    author: educationPost.frontmatter.author,
     excerpt: educationPost.frontmatter.excerpt,
     content: educationPost.content,
   }
