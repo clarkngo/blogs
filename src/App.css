@@ -6,7 +6,7 @@
 
 .main-container {
   flex: 1;
-  padding: 0 var(--spacing-md);
+  padding: var(--spacing-lg) var(--spacing-md);
 }
 
 .footer {

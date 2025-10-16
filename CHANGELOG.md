@@ -2,6 +2,50 @@
 
 All notable changes to this blog project will be documented in this file.
 
+## [2025-10-17 - Readability & UX Polish]
+
+### Added - 2025-10-17 00:05:00
+
+#### Global Styles (`/src/index.css`)
+- Increased base line-height to 1.7 and font-size scaling on large screens
+- Smooth scrolling, improved link underline styles, better selection color
+- Normalize media elements to be responsive by default
+
+#### Post Styles (`/src/components/BlogPost.css`)
+- Improved paragraph rhythm and list markers
+- Added blockquote, hr, image styling for better readability
+- Added `pre` code block styling with dark background and rounded corners
+
+#### List Page Styles (`/src/components/BlogList.css`)
+- Improved accessibility: focus-visible outlines for cards
+- Standard `line-clamp` along with `-webkit-line-clamp` for better compatibility
+- Subtle border by default; accent border on hover
+
+#### Layout (`/src/App.css`)
+- Added vertical padding to main container for more breathing room
+
+---
+
+## [2025-10-16 - Branding Update]
+
+### Added - 2025-10-16 23:59:30
+
+#### Structure
+- Updated header brand to include site logo image next to the title
+  - File: `/src/components/Header.jsx`
+
+#### Styles
+- New styles for header brand and logo
+  - File: `/src/components/Header.css`
+  - Added `.header-brand` flex container and `.header-logo` sizing (44px desktop, 36px mobile)
+
+#### Assets & Icons
+- Set site favicon dynamically using Vite asset handling
+  - File: `/src/main.jsx`
+  - Logic: import PNG and set `link[rel="icon"]` at runtime for correct base path
+
+---
+
 ## [2025-10-16 - Navigation and Routing Update]
 
 ### Added - 2025-10-16 23:58:00

@@ -1,13 +1,17 @@
 import { Link } from 'react-router-dom';
 import './Header.css';
+import logoPng from '../assets/mechanized_flame_wolf_head.png';
 
 function Header() {
   return (
     <header className="header">
       <div className="header-container">
-        <Link to="/" className="header-link">
-          <h1 className="header-title">Thought Journal</h1>
-        </Link>
+        <div className="header-brand">
+          <Link to="/" className="header-link">
+            <img src={logoPng} alt="Thought Journal logo: mechanized flame wolf head" className="header-logo" />
+            <h1 className="header-title">Thought Journal</h1>
+          </Link>
+        </div>
         <p className="header-subtitle">Essays on Education, Technology, and the Future</p>
       </div>
     </header>

@@ -21,6 +21,8 @@
   --spacing-2xl: 4rem;
 }
 
+html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   font-family: var(--font-sans);
@@ -28,9 +30,43 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-bg);
   color: var(--color-primary);
-  line-height: 1.6;
+  line-height: 1.7;
+  font-size: 16px;
 }
 
 #root {
   min-height: 100vh;
+}
+
+/* Media query to slightly increase base font size on larger screens */
+@media (min-width: 1024px) {
+  body { font-size: 17px; }
+}
+
+/* Global link styles */
+a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  text-underline-offset: 4px;
+}
+
+/* Better selection */
+::selection {
+  background: rgba(37, 99, 235, 0.18);
+}
+
+/* Media & images default */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Better text rendering for long content */
+p, li {
+  hanging-punctuation: first;
 }
