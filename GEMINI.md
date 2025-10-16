@@ -55,6 +55,22 @@ When making changes:
 - Keep styles scoped and organized
 - Write semantic HTML within JSX
 
+### 7. Build and Deployment
+**CRITICAL**: Always run `npm run build` before committing and pushing changes.
+
+Build process:
+1. Run `npm run build` to create production bundle
+2. Verify build completes successfully without errors
+3. Check build output size (dist/index.html)
+4. Then commit changes with descriptive message
+5. Push to remote repository
+
+This ensures:
+- All code compiles correctly
+- No build-time errors are introduced
+- Production bundle is always up-to-date
+- Deployment-ready code in the repository
+
 ---
 
 **Last Updated**: October 16, 2025

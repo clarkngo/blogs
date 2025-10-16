@@ -8,7 +8,6 @@ function Header() {
       <div className="header-container">
         <div className="header-brand">
           <Link to="/" className="header-link">
-            <img src={logoPng} alt="Thought Journal logo: mechanized flame wolf head" className="header-logo" />
             <h1 className="header-title">Thought Journal</h1>
           </Link>
         </div>
