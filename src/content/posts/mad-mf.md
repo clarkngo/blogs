@@ -72,3 +72,37 @@ The proposed architecture warrants empirical study in the following areas:
 1. **Performance Metrics:** A comparative analysis of build/deploy times between a monolithic repository, a traditional monorepo, and a MAD-MF structure.
 2. **Cross-Repo Orchestration:** Investigating optimal strategies for sharing state, libraries, and routing mechanisms across completely separate feature repositories (e.g., using Module Federation, shared state services).
 3. **Total Cost of Ownership (TCO):** Quantifying the TCO, including the overhead of managing numerous repositories versus the gains in development velocity and AI assistance.
+
+---
+
+## Project Architecture Overview
+
+This documentation outlines the hierarchical structure and relationships between the repositories powering my portfolio and projects. The architecture is designed for clarity, modularity, and ease of navigation.
+
+### Repository Hierarchy
+
+| Repository                | Parent                | Purpose                                                                                  |
+|---------------------------|-----------------------|------------------------------------------------------------------------------------------|
+| **clarkngo.github.io**    | None (Root)           | Main gateway to all projects and portfolio sections.                                     |
+| **/blogs**                | clarkngo.github.io    | My thought journals and technical write-ups.                                             |
+| **/AI-Hub**               | clarkngo.github.io    | The central framework for all Artificial Intelligence projects.                          |
+| **/AI-Unplugged**         | /AI-Hub               | Foundational concepts, theory, and non-code deep dives into AI.                          |
+| **/AI-tools**             | /AI-Hub               | Practical, reusable code utilities and scripts for AI development.                       |
+| **/AI-storybooks**        | /AI-Hub               | Creative projects focusing on AI-assisted storytelling and narrative generation.          |
+
+### Parent-Child Relationships
+
+- **clarkngo.github.io** is the root repository, serving as the main site and entry point. It links directly to both the `/blogs` and `/AI-Hub` sections.
+- **/blogs** and **/AI-Hub** are direct children of the main site, each representing a major area of focus: personal writing and AI projects, respectively.
+- **/AI-Hub** acts as a parent to three specialized sub-projects:
+  - **/AI-Unplugged**: For theoretical and conceptual explorations in AI, without code.
+  - **/AI-tools**: Contains practical scripts, utilities, and code modules for AI development.
+  - **/AI-storybooks**: Dedicated to creative, narrative-driven AI experiments.
+
+### Proposals Page
+
+The main site also features a `/proposals` page, which links to various project proposals and ideas, providing a centralized location for reviewing and accessing new initiatives.
+
+---
+
+This architecture ensures each repository has a clear purpose and relationship, making it easy for visitors and collaborators to explore and contribute to different facets of the portfolio.
