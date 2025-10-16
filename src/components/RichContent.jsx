@@ -1,9 +1,20 @@
 import DOMPurify from 'dompurify';
 import parse, { domToReact } from 'html-react-parser';
+import { H2, H3 } from './Heading';
+import Blockquote from './Blockquote';
 
-// Minimal enhancements: open links in new tab with rel, add loading to images
+// Map HTML tags to custom React components with UX enhancements
 const transform = (node) => {
   if (node.type === 'tag') {
+    if (node.name === 'h2') {
+      return <H2>{domToReact(node.children, { transform })}</H2>;
+    }
+    if (node.name === 'h3') {
+      return <H3>{domToReact(node.children, { transform })}</H3>;
+    }
+    if (node.name === 'blockquote') {
+      return <Blockquote>{domToReact(node.children, { transform })}</Blockquote>;
+    }
     if (node.name === 'a') {
       const props = node.attribs || {};
       return (

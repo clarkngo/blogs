@@ -4,6 +4,27 @@ All notable changes to this blog project will be documented in this file.
 
 ## [2025-10-17 - Readability & UX Polish]
 
+### Added - 2025-10-17 00:15:00
+
+#### Custom Components
+- Created `Heading` component for H2 and H3 with anchor links
+  - File: `/src/components/Heading.jsx`
+  - Features: auto-generated slugified IDs, copy-to-clipboard anchor buttons, "#" icon that changes to "✓" on copy
+- Created `Blockquote` component with decorative quote icon
+  - File: `/src/components/Blockquote.jsx`
+  - Features: SVG quote icon (24x24), enhanced visual styling
+- Added component mapping in `RichContent` transform
+  - Maps `h2` → `H2`, `h3` → `H3`, `blockquote` → `Blockquote`
+  - Provides deep-linkable headings and visually enhanced quotes
+
+#### Component Styles
+- Added styles for custom Heading component
+  - File: `/src/components/Heading.css`
+  - Features: anchor button with opacity transitions, hover/focus states
+- Added styles for custom Blockquote component
+  - File: `/src/components/Blockquote.css`
+  - Features: positioned quote icon, gradient background, border-left accent, responsive padding
+
 ### Added - 2025-10-17 00:05:00
 
 #### Rendering
