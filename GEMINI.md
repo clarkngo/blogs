@@ -39,6 +39,11 @@ When making changes:
 - Blog posts are stored in `/src/content/posts/` as `.md` files
 - Posts are imported and parsed in `/src/data/posts.js`
 
+**Filename Convention**:
+- Use lowercase kebab-case for all post filenames.
+- Examples: `education-ai.md`, `mad-mf.md`, `ai-unplugged-deep-dive.md`, `ai-bloom.md`.
+- Rationale: Consistent, URL-friendly names that match asset folders under `public/posts/<slug>/`.
+
 **Post Template**:
 ```markdown
 ---

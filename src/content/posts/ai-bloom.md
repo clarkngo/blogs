@@ -1,3 +1,14 @@
+---
+id: 4
+title: "AI and Bloom's Taxonomy: Redefining Higher-Order Thinking"
+date: "October 16, 2025"
+tags: ["Education", "AI", "Bloom's Taxonomy", "Pedagogy"]
+author: "Clark Ngo"
+excerpt: "How AI shifts Bloom's Taxonomy toward higher-order thinking by automating lower-order tasks and augmenting human judgment, creativity, and ethics."
+---
+
+![Bloom's Taxonomy Pyramids](/posts/ai-bloom/ai-bloom-taxonomy-pyramids.png)
+
 The advent of **Artificial Intelligence (AI)** is not rendering **Bloom's Taxonomy** obsolete; instead, it's forcing a **re-contextualization** of the framework. AI shifts the focus of human learning from lower-order tasks to complex, higher-order thinking, essentially redefining the cognitive partnership between human and machine.
 
 ## 🤖 AI and Bloom's Taxonomy: A New Cognitive Partnership
@@ -34,6 +45,8 @@ Assignments that rely purely on basic recall or summarization are now easily aut
 A crucial new dimension to the "Understanding" and "Evaluating" levels is **AI literacy**. Learners must be taught how AI works, its inherent limitations, and the appropriate ethical use of these tools, ensuring they can critically reflect on and effectively manage the outputs provided by the AI.
 
 ---
+
+![Bloom's Visual Selection](/posts/ai-bloom/ai-bloom-taxonomy-selection.svg)
 
 ## 📚 Sources
 

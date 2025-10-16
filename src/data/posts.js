@@ -1,7 +1,8 @@
 // Import markdown files as raw text
 import educationMd from '../content/posts/education-ai.md?raw';
 import madmfMd from '../content/posts/mad-mf.md?raw';
-import aiUnpluggedMd from '../content/posts/ai_unplugged_deep_dive.md?raw';
+import aiUnpluggedMd from '../content/posts/ai-unplugged-deep-dive.md?raw';
+import aiBloomMd from '../content/posts/ai-bloom.md?raw';
 
 // Simple frontmatter parser
 function parseFrontmatter(markdown) {
@@ -51,8 +52,19 @@ function parseFrontmatter(markdown) {
 const educationPost = parseFrontmatter(educationMd);
 const madmfPost = parseFrontmatter(madmfMd);
 const aiUnpluggedPost = parseFrontmatter(aiUnpluggedMd);
+const aiBloomPost = parseFrontmatter(aiBloomMd);
 
 export const posts = [
+  // Newest first
+  {
+    id: aiBloomPost.frontmatter.id,
+    title: aiBloomPost.frontmatter.title,
+    date: aiBloomPost.frontmatter.date,
+    tags: aiBloomPost.frontmatter.tags,
+    author: aiBloomPost.frontmatter.author,
+    excerpt: aiBloomPost.frontmatter.excerpt,
+    content: aiBloomPost.content,
+  },
   {
     id: aiUnpluggedPost.frontmatter.id,
     title: aiUnpluggedPost.frontmatter.title,
