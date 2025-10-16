@@ -84,6 +84,35 @@ Your markdown content here...
 
 Then import and add them to `src/data/posts.js`.
 
+## Adding Images per Post
+
+Use the `public/` folder for image assets so they’re addressable from markdown without extra code.
+
+Recommended layout:
+
+```
+public/
+├── posts/
+│   ├── ai-unplugged/
+│   │   └── cover.png
+│   ├── mad-mf/
+│   │   └── architecture.svg
+│   └── education-ai/
+│       └── hero.webp
+└── authors/
+	└── clark-ngo.jpg
+```
+
+Reference in markdown with absolute paths (base is `/blogs/` on GitHub Pages):
+
+```markdown
+![Cover](/posts/ai-unplugged/cover.png)
+<img src="/posts/mad-mf/architecture.svg" alt="Architecture" width="800" />
+![Author](/authors/clark-ngo.jpg)
+```
+
+These will resolve to `https://clarkngo.github.io/blogs/...` in production.
+
 ## Deployment
 
 This blog is configured for GitHub Pages:
