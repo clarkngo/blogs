@@ -32,22 +32,59 @@ When making changes:
 - Use semantic class names
 
 ### 5. Blog Post Management
-- All blog posts are stored in `/src/data/posts.js`
-- Posts should include:
-  - `id`: Unique identifier (number)
-  - `title`: Post title (string)
-  - `date`: Publication date (string, format: "Month DD, YYYY")
-  - `tags`: Array of relevant tags (string[])
-  - `excerpt`: Brief summary/description (string)
-  - `content`: Full post content in HTML format (string)
-- New posts should be added at the beginning of the array (newest first)
+
+**Content Format**: All blog posts are written in **Markdown** format with YAML frontmatter.
+
+**File Structure**:
+- Blog posts are stored in `/src/content/posts/` as `.md` files
+- Posts are imported and parsed in `/src/data/posts.js`
+
+**Post Template**:
+```markdown
+---
+id: 1
+title: "Your Post Title"
+date: "October 16, 2025"
+tags: ["Tag1", "Tag2", "Tag3"]
+excerpt: "A brief summary of your post"
+---
+
+Your markdown content here...
+
+### Section Heading
+
+Content with **bold**, *italic*, [links](https://example.com), etc.
+```
+
+**Required Frontmatter Fields**:
+- `id`: Unique identifier (number)
+- `title`: Post title (string, use quotes)
+- `date`: Publication date (string, format: "Month DD, YYYY")
+- `tags`: Array of relevant tags (e.g., ["Education", "AI"])
+- `excerpt`: Brief summary/description (string, use quotes)
+
+**Content Guidelines**:
+- Write content in standard Markdown format
+- Use GitHub Flavored Markdown (GFM) features: tables, task lists, strikethrough
+- Headings: Use `###` for main sections (renders as h3)
+- Links automatically open in new tabs
+- Tables automatically get `.post-table` class for styling
 - Include references section when applicable
-- Rendering: Use `RichContent` to render `content` (sanitized with DOMPurify and parsed to React). Do NOT use `dangerouslySetInnerHTML`.
-- **Tags Guidelines**:
-  - Use 3-6 relevant tags per post
-  - Use title case (e.g., "Web Development", "AI")
-  - Keep tags consistent across posts
-  - Common tags: Education, AI, Web Development, Architecture, Innovation, React, etc.
+
+**Adding New Posts**:
+1. Create new `.md` file in `/src/content/posts/`
+2. Add frontmatter at the top
+3. Write content in Markdown
+4. Import the file in `/src/data/posts.js`
+5. Add to posts array (newest first)
+
+**Rendering**: Posts are rendered using `RichContent` component with `react-markdown` and `remark-gfm` plugins.
+
+**Tags Guidelines**:
+- Use 3-6 relevant tags per post
+- Use title case (e.g., "Web Development", "AI")
+- Keep tags consistent across posts
+- Common tags: Education, AI, Web Development, Architecture, Innovation, React, etc.
 
 ### 6. Code Quality
 - Follow React best practices
@@ -73,4 +110,4 @@ This ensures:
 
 ---
 
-**Last Updated**: October 16, 2025
+**Last Updated**: October 17, 2025

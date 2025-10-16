@@ -2,6 +2,49 @@
 
 All notable changes to this blog project will be documented in this file.
 
+## [2025-10-17 - Markdown Migration]
+
+### Added - 2025-10-17 00:30:00
+
+#### Content Management System
+- **Migrated to Markdown-based content** for better maintainability
+  - Created `/src/content/posts/` directory for markdown files
+  - Converted all blog posts from HTML strings to Markdown (.md) files
+  - Files: `education-ai.md`, `mad-mf.md`
+  - Added frontmatter support (id, title, date, tags, excerpt)
+
+#### Dependencies
+- Installed `react-markdown` for markdown parsing
+- Installed `remark-gfm` for GitHub Flavored Markdown support (tables, strikethrough, etc.)
+
+#### Updated Components
+- Updated `RichContent.jsx` to use ReactMarkdown instead of dangerouslySetInnerHTML
+  - Added custom table component to preserve `.post-table` class
+  - Links automatically open in new tabs with proper security attributes
+  - Full GFM support including tables, task lists, strikethrough
+  
+#### Data Layer
+- Rewrote `/src/data/posts.js` with frontmatter parser
+  - Imports markdown files as raw text using Vite's `?raw` suffix
+  - Parses YAML-like frontmatter to extract metadata
+  - Separates content from metadata for clean rendering
+
+#### Documentation
+- Updated `README.md` with comprehensive project documentation
+  - Installation instructions
+  - Project structure
+  - How to write new blog posts
+  - Deployment guide
+
+#### Benefits
+- ✅ Content is now easier to write and edit (no HTML tags)
+- ✅ Better syntax highlighting in editors
+- ✅ Clean separation of content and code
+- ✅ Standard markdown format (portable and version-controllable)
+- ✅ Support for all GitHub Flavored Markdown features
+
+---
+
 ## [2025-10-17 - Readability & UX Polish]
 
 ### Added - 2025-10-17 00:15:00
