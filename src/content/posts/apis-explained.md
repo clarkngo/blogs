@@ -69,6 +69,8 @@ HTTP headers are metadata sent with requests and responses. They control authent
   - Example: `Authorization: Bearer <token>` for JWTs or OAuth2 access tokens.
   - Why it matters: Without valid credentials you'll get 401/403 responses.
 
+![API headers and request flow](/blogs/posts/apis-explained/api-headers-diagram.svg)
+
 - Content-Type
   - Purpose: Tells the server the media type of the request body.
   - Example: `Content-Type: application/json`
