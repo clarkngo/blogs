@@ -13,7 +13,7 @@ function App() {
         <main className="main-container">
           <Routes>
             <Route path="/" element={<BlogList posts={posts} />} />
-            <Route path="/post/:id" element={<BlogPostView />} />
+            <Route path="/post/:slug" element={<BlogPostView />} />
           </Routes>
         </main>
         <footer className="footer">

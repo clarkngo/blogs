@@ -4,8 +4,8 @@ import './BlogPostView.css';
 import RichContent from './RichContent';
 
 function BlogPostView() {
-  const { id } = useParams();
-  const post = posts.find(p => p.id === parseInt(id));
+  const { slug } = useParams();
+  const post = posts.find(p => p.slug === slug || String(p.id) === String(slug));
 
   if (!post) {
     return (

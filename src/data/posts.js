@@ -79,6 +79,21 @@ function decorateTitle(frontmatter) {
   return emoji ? `${emoji} ${title}`.trim() : title;
 }
 
+// Basic slug generator from a title. Uses original frontmatter title
+// (not the decorated title) to keep slugs predictable.
+function slugifyTitle(frontmatter) {
+  const title = frontmatter && frontmatter.title ? String(frontmatter.title) : '';
+  if (!title) return '';
+  return title
+    .normalize('NFKD') // normalize accents
+    .replace(/[\u0300-\u036f]/g, '') // remove diacritics
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s-]/g, '') // remove invalid chars
+    .replace(/\s+/g, '-') // collapse whitespace to hyphen
+    .replace(/-+/g, '-'); // collapse multiple hyphens
+}
+
 // Parse the markdown files
 const educationPost = parseFrontmatter(educationMd);
 const madmfPost = parseFrontmatter(madmfMd);
@@ -92,6 +107,7 @@ export const posts = [
   {
     id: apisPost.frontmatter.id,
     title: decorateTitle(apisPost.frontmatter),
+    slug: slugifyTitle(apisPost.frontmatter) || String(apisPost.frontmatter.id),
     date: apisPost.frontmatter.date,
     tags: apisPost.frontmatter.tags,
     author: apisPost.frontmatter.author,
@@ -101,6 +117,7 @@ export const posts = [
   {
     id: fiveAiAgentsPost.frontmatter.id,
     title: decorateTitle(fiveAiAgentsPost.frontmatter),
+    slug: slugifyTitle(fiveAiAgentsPost.frontmatter) || String(fiveAiAgentsPost.frontmatter.id),
     date: fiveAiAgentsPost.frontmatter.date,
     tags: fiveAiAgentsPost.frontmatter.tags,
     author: fiveAiAgentsPost.frontmatter.author,
@@ -110,6 +127,7 @@ export const posts = [
   {
     id: aiBloomPost.frontmatter.id,
     title: decorateTitle(aiBloomPost.frontmatter),
+    slug: slugifyTitle(aiBloomPost.frontmatter) || String(aiBloomPost.frontmatter.id),
     date: aiBloomPost.frontmatter.date,
     tags: aiBloomPost.frontmatter.tags,
     author: aiBloomPost.frontmatter.author,
@@ -119,6 +137,7 @@ export const posts = [
   {
     id: aiUnpluggedPost.frontmatter.id,
     title: decorateTitle(aiUnpluggedPost.frontmatter),
+    slug: slugifyTitle(aiUnpluggedPost.frontmatter) || String(aiUnpluggedPost.frontmatter.id),
     date: aiUnpluggedPost.frontmatter.date,
     tags: aiUnpluggedPost.frontmatter.tags,
     author: aiUnpluggedPost.frontmatter.author,
@@ -128,6 +147,7 @@ export const posts = [
   {
     id: madmfPost.frontmatter.id,
     title: decorateTitle(madmfPost.frontmatter),
+    slug: slugifyTitle(madmfPost.frontmatter) || String(madmfPost.frontmatter.id),
     date: madmfPost.frontmatter.date,
     tags: madmfPost.frontmatter.tags,
     author: madmfPost.frontmatter.author,
@@ -137,6 +157,7 @@ export const posts = [
   {
     id: educationPost.frontmatter.id,
     title: decorateTitle(educationPost.frontmatter),
+    slug: slugifyTitle(educationPost.frontmatter) || String(educationPost.frontmatter.id),
     date: educationPost.frontmatter.date,
     tags: educationPost.frontmatter.tags,
     author: educationPost.frontmatter.author,
