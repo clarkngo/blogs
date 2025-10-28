@@ -84,27 +84,7 @@
 }
 
 /* Emoji filter styles */
-.emoji-filter-row {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-  margin-bottom: 0.5rem;
-}
-
-.emoji-filter {
-  background: transparent;
-  border: 1px solid rgba(34,34,34,0.08);
-  padding: 0.35rem 0.5rem;
-  border-radius: 8px;
-  font-size: 1.25rem;
-  cursor: pointer;
-}
-
-.emoji-filter.active {
-  background: var(--color-accent);
-  color: white;
-  box-shadow: 0 2px 6px rgba(16,24,40,0.06);
-}
+/* emoji filters removed — styles cleaned up */
 
 .blog-list-grid {
   display: grid;

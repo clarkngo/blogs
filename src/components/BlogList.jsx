@@ -5,7 +5,6 @@ import './BlogList.css';
 function BlogList({ posts }) {
   const [query, setQuery] = useState('');
   const [selectedTags, setSelectedTags] = useState(new Set());
-  const [selectedEmojis, setSelectedEmojis] = useState(new Set());
 
   // Collect unique tags from posts
   const allTags = useMemo(() => {
@@ -14,26 +13,6 @@ function BlogList({ posts }) {
     return Array.from(set).sort();
   }, [posts]);
 
-  // Tag -> emoji mapping (kept in sync with src/data/posts.js tagEmojiMap)
-  const tagEmojiMap = {
-    ai: '🤖',
-    education: '🎓',
-    'deep-learning': '🧠',
-    tools: '🧰',
-    bloom: '🌱',
-    research: '🔬',
-    tutorial: '📚'
-  };
-
-  // derive unique emojis available from tags
-  const allEmojis = useMemo(() => {
-    const set = new Set();
-    allTags.forEach(t => {
-      const e = tagEmojiMap[String(t).toLowerCase()];
-      if (e) set.add(e);
-    });
-    return Array.from(set);
-  }, [allTags]);
 
   const toggleTag = (tag) => {
     setSelectedTags(prev => {
@@ -44,14 +23,6 @@ function BlogList({ posts }) {
     });
   };
 
-  const toggleEmoji = (emoji) => {
-    setSelectedEmojis(prev => {
-      const next = new Set(prev);
-      if (next.has(emoji)) next.delete(emoji);
-      else next.add(emoji);
-      return next;
-    });
-  };
 
   const clearFilters = () => {
     setQuery('');
@@ -68,19 +39,6 @@ function BlogList({ posts }) {
         if (!has) return false;
       }
 
-      // Emoji filter (OR): if any emoji selected, require post to have a tag that maps to one of them
-      if (selectedEmojis.size > 0) {
-        const tags = post.tags || [];
-        let hasEmoji = false;
-        for (const t of tags) {
-          const mapped = tagEmojiMap[String(t).toLowerCase()];
-          if (mapped && selectedEmojis.has(mapped)) {
-            hasEmoji = true;
-            break;
-          }
-        }
-        if (!hasEmoji) return false;
-      }
 
       if (!q) return true;
 
@@ -103,21 +61,6 @@ function BlogList({ posts }) {
             aria-label="Search posts"
           />
           <button className="clear-btn" onClick={clearFilters} aria-label="Clear search and tags">Clear</button>
-        </div>
-
-        {/* Emoji filter row */}
-        <div className="emoji-filter-row" aria-label="Filter by emoji">
-          {allEmojis.map(emoji => (
-            <button
-              key={emoji}
-              type="button"
-              className={`emoji-filter ${selectedEmojis.has(emoji) ? 'active' : ''}`}
-              onClick={() => toggleEmoji(emoji)}
-              aria-label={`Filter by ${emoji}`}
-            >
-              {emoji}
-            </button>
-          ))}
         </div>
 
         <div className="tag-filter-row" aria-label="Filter by tag">
