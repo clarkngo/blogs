@@ -1,7 +1,7 @@
 ---
 id: 5
 title: "Five AI Agent Development Strategies"
-date: "October 16, 2025"
+date: "October 28, 2025"
 tags: ["AI","Agents","Development","Productivity","Workflow"]
 author: "Clark Ngo"
 excerpt: "Five practical strategies to accelerate building reliable multi-agent AI systems — learned from the Google AI Agent Bakeoff and applied to real projects."
