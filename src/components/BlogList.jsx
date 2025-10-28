@@ -47,7 +47,6 @@ function BlogList({ posts }) {
 
   return (
     <div className="blog-list">
-      <h2 className="blog-list-title">Recent Posts</h2>
 
       <div className="blog-list-controls">
         <div className="search-row">
@@ -73,9 +72,11 @@ function BlogList({ posts }) {
             </button>
           ))}
         </div>
-      </div>
+  </div>
 
-      <div className="blog-list-grid">
+  <h2 className="blog-list-title">Recent Posts</h2>
+
+  <div className="blog-list-grid">
         {filtered.map(post => (
           <Link to={`/post/${post.id}`} key={post.id} className="blog-card">
             <div className="blog-card-content">
