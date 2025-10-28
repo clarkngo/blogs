@@ -22,19 +22,22 @@
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  justify-content: center; /* center the search control horizontally */
   margin-bottom: var(--spacing-sm);
 }
 
 .search-input {
-  /* make the search bar visually smaller and higher-contrast */
-  flex: 0 1 520px;
-  padding: 0.45rem 0.6rem;
-  border-radius: 8px;
-  border: 1px solid rgba(34,34,34,0.12);
-  background: #ffffff; /* higher contrast */
+  /* larger, more prominent search bar centered in the layout */
+  flex: 0 1 720px; /* allow it to grow but cap width */
+  max-width: 90%;
+  padding: 0.65rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid rgba(34,34,34,0.16);
+  background: #ffffff; /* keep high contrast */
   color: var(--color-primary);
-  font-size: 0.9rem;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.02) inset;
+  font-size: 1.15rem; /* larger font for prominence */
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  text-align: left;
 }
 
 .clear-btn {
@@ -50,6 +53,11 @@
   outline: none;
   box-shadow: 0 0 0 4px rgba(37,99,235,0.08);
   border-color: var(--color-accent);
+}
+
+/* ensure clear button sits visually next to the centered input without shifting layout */
+.clear-btn {
+  margin-left: 0.5rem;
 }
 
 .tag-filter-row {
@@ -73,6 +81,29 @@
   background: var(--color-accent);
   color: white;
   border-color: var(--color-accent);
+}
+
+/* Emoji filter styles */
+.emoji-filter-row {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.emoji-filter {
+  background: transparent;
+  border: 1px solid rgba(34,34,34,0.08);
+  padding: 0.35rem 0.5rem;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.emoji-filter.active {
+  background: var(--color-accent);
+  color: white;
+  box-shadow: 0 2px 6px rgba(16,24,40,0.06);
 }
 
 .blog-list-grid {
