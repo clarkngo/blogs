@@ -49,6 +49,35 @@ function parseFrontmatter(markdown) {
   return { frontmatter, content };
 }
 
+// Tag -> emoji mapping used to decorate titles for a fun UI touch.
+const tagEmojiMap = {
+  ai: '🤖',
+  education: '🎓',
+  'deep-learning': '🧠',
+  tools: '🧰',
+  bloom: '🌱',
+  research: '🔬',
+  tutorial: '📚',
+  default: '✨'
+};
+
+function getEmojiForTags(tags) {
+  if (!tags) return '';
+  // accommodate both string and array frontmatter formats
+  const list = Array.isArray(tags) ? tags : String(tags).split(',').map(t => t.trim());
+  for (const t of list) {
+    const key = String(t).toLowerCase();
+    if (tagEmojiMap[key]) return tagEmojiMap[key];
+  }
+  return tagEmojiMap.default;
+}
+
+function decorateTitle(frontmatter) {
+  const title = frontmatter && frontmatter.title ? frontmatter.title : '';
+  const emoji = getEmojiForTags(frontmatter && frontmatter.tags);
+  return emoji ? `${emoji} ${title}`.trim() : title;
+}
+
 // Parse the markdown files
 const educationPost = parseFrontmatter(educationMd);
 const madmfPost = parseFrontmatter(madmfMd);
@@ -60,7 +89,7 @@ export const posts = [
   // Newest first
   {
     id: fiveAiAgentsPost.frontmatter.id,
-    title: fiveAiAgentsPost.frontmatter.title,
+    title: decorateTitle(fiveAiAgentsPost.frontmatter),
     date: fiveAiAgentsPost.frontmatter.date,
     tags: fiveAiAgentsPost.frontmatter.tags,
     author: fiveAiAgentsPost.frontmatter.author,
@@ -69,7 +98,7 @@ export const posts = [
   },
   {
     id: aiBloomPost.frontmatter.id,
-    title: aiBloomPost.frontmatter.title,
+    title: decorateTitle(aiBloomPost.frontmatter),
     date: aiBloomPost.frontmatter.date,
     tags: aiBloomPost.frontmatter.tags,
     author: aiBloomPost.frontmatter.author,
@@ -78,7 +107,7 @@ export const posts = [
   },
   {
     id: aiUnpluggedPost.frontmatter.id,
-    title: aiUnpluggedPost.frontmatter.title,
+    title: decorateTitle(aiUnpluggedPost.frontmatter),
     date: aiUnpluggedPost.frontmatter.date,
     tags: aiUnpluggedPost.frontmatter.tags,
     author: aiUnpluggedPost.frontmatter.author,
@@ -87,7 +116,7 @@ export const posts = [
   },
   {
     id: madmfPost.frontmatter.id,
-    title: madmfPost.frontmatter.title,
+    title: decorateTitle(madmfPost.frontmatter),
     date: madmfPost.frontmatter.date,
     tags: madmfPost.frontmatter.tags,
     author: madmfPost.frontmatter.author,
@@ -96,7 +125,7 @@ export const posts = [
   },
   {
     id: educationPost.frontmatter.id,
-    title: educationPost.frontmatter.title,
+    title: decorateTitle(educationPost.frontmatter),
     date: educationPost.frontmatter.date,
     tags: educationPost.frontmatter.tags,
     author: educationPost.frontmatter.author,
