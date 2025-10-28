@@ -60,6 +60,61 @@ How to approach a new API quickly:
 4. Inspect a single resource (e.g., `GET /flights/123`) to see its fields.
 5. Read error responses — they often tell you exactly what's missing.
 
+## 3.1 — Typical API headers and why they matter
+
+HTTP headers are metadata sent with requests and responses. They control authentication, content negotiation, caching, tracing, and more. Understanding common headers helps you interact with APIs reliably and debug issues faster.
+
+- Authorization
+  - Purpose: Carries credentials or tokens (who you are).
+  - Example: `Authorization: Bearer <token>` for JWTs or OAuth2 access tokens.
+  - Why it matters: Without valid credentials you'll get 401/403 responses.
+
+- Content-Type
+  - Purpose: Tells the server the media type of the request body.
+  - Example: `Content-Type: application/json`
+  - Why it matters: The server uses this to parse your payload (e.g., JSON vs form data).
+
+- Accept
+  - Purpose: Signals what response formats the client can handle.
+  - Example: `Accept: application/json`
+  - Why it matters: Helps the API pick a response format when multiple are supported.
+
+- User-Agent
+  - Purpose: Identifies the client software.
+  - Example: `User-Agent: MyTravelApp/1.0`
+  - Why it matters: Useful for analytics and sometimes for troubleshooting request blocking.
+
+- X-Request-ID / X-Correlation-ID
+  - Purpose: Unique IDs you include to trace a request end-to-end across services.
+  - Example: `X-Request-ID: 6f1a2b3c-8d4e-11ea-bc55-0242ac130003`
+  - Why it matters: When you report an error to an API provider, giving this ID lets them locate logs quickly.
+
+- Cache-Control
+  - Purpose: Controls caching behavior for responses.
+  - Example: `Cache-Control: no-cache` or `Cache-Control: max-age=60`
+  - Why it matters: Affects freshness; important when you expect live data.
+
+- Rate limit headers (response headers)
+  - Common examples: `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset`.
+  - Why it matters: Lets clients back off or schedule retries before hitting quotas.
+
+Example: a typical authenticated JSON POST request with headers
+
+```bash
+curl -X POST "https://api.example.com/bookings" \
+  -H "Authorization: Bearer $ACCESS_TOKEN" \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "X-Request-ID: $(uuidgen)" \
+  -d '{"flight_id": 123, "passenger": {"name":"Alice"}}'
+```
+
+Quick tips:
+
+- Always include an `X-Request-ID` on critical requests so you can reference it with support teams.
+- For public APIs, keep your `Authorization` credentials on a server (never embed secrets in client-side code).
+- Inspect `X-RateLimit-Remaining` to avoid sudden 429 errors; implement exponential backoff on 429/5xx responses.
+
 ## 4 — Prompts and examples to help you work with APIs (use with an LLM)
 
 The right prompts make an LLM a powerful assistant for learning and working with APIs. Here are practical prompt templates you can copy:
