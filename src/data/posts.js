@@ -4,6 +4,7 @@ import madmfMd from '../content/posts/mad-mf.md?raw';
 import aiUnpluggedMd from '../content/posts/ai-unplugged-deep-dive.md?raw';
 import aiBloomMd from '../content/posts/ai-bloom.md?raw';
 import fiveAiAgentsMd from '../content/posts/five-ai-agent-development-strategies.md?raw';
+import apisMd from '../content/posts/apis-explained.md?raw';
 
 // Simple frontmatter parser
 function parseFrontmatter(markdown) {
@@ -84,9 +85,19 @@ const madmfPost = parseFrontmatter(madmfMd);
 const aiUnpluggedPost = parseFrontmatter(aiUnpluggedMd);
 const aiBloomPost = parseFrontmatter(aiBloomMd);
 const fiveAiAgentsPost = parseFrontmatter(fiveAiAgentsMd);
+const apisPost = parseFrontmatter(apisMd);
 
 export const posts = [
   // Newest first
+  {
+    id: apisPost.frontmatter.id,
+    title: decorateTitle(apisPost.frontmatter),
+    date: apisPost.frontmatter.date,
+    tags: apisPost.frontmatter.tags,
+    author: apisPost.frontmatter.author,
+    excerpt: apisPost.frontmatter.excerpt,
+    content: apisPost.content,
+  },
   {
     id: fiveAiAgentsPost.frontmatter.id,
     title: decorateTitle(fiveAiAgentsPost.frontmatter),
