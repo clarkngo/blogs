@@ -119,5 +119,3 @@ On the screen, the friendly defense batteries turned and fired on the friendly f
 ---
 
 *End of vignettes.*
-
-If you'd like, I can shorten the title/slug, add a hero image under `public/posts/<slug>/`, or tweak the frontmatter tags. I can also register this post as the newest entry in the blog index so it appears on the site.
