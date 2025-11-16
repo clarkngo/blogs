@@ -184,4 +184,53 @@ Quick practical checklist for interviews
 Final note
 - I prefer engineers who know fundamentals (IR, systems, distributed infra, cost modeling) and can apply those fundamentals to LLMs. When hiring, look for people who can trade off simplicity and robustness over novelty.
 
-If you want, I’ll add this as a new post entry on the site (I already will), shorten the title/slug, or create an accompanying `public/posts/<slug>/hero.jpg` image. I can also generate a one-page hiring rubric based on these questions.
+Study roadmap for aspiring AI engineers (for readers new to the field)
+This roadmap is a practical path to build the skills I look for in candidates. Estimated timeline: ~6–18 months depending on background.
+
+1) Foundations (1–3 months)
+- Computer Science fundamentals: data structures, algorithms, complexity. Practice on problems and systems design.
+- Python fluency: idiomatic Python, async IO, virtualenv, packaging.
+- Math basics: linear algebra, probability & statistics, and basic calculus. Khan Academy / MIT OCW are good starting points.
+
+2) Machine Learning core (2–4 months)
+- Learn supervised learning, overfitting/underfitting, regularization, cross-validation.
+- Frameworks: PyTorch (preferred) or TensorFlow. Build small projects (image classifier, sentiment model).
+- Practice with scikit-learn and ML pipelines.
+
+3) NLP & Transformers (2–3 months)
+- Understand tokenization (BPE, SentencePiece), attention, transformers architecture.
+- Hands-on: fine-tune a transformer on a small dataset with Hugging Face — run SFT and experiment with LoRA.
+- Read key papers: Attention Is All You Need; GPT family intros; relevant HF docs.
+
+4) Retrieval & Embeddings (1–2 months)
+- Classical IR: BM25, TF-IDF, inverted indices.
+- Embeddings: train/use SBERT, practice ANN libraries (FAISS, Annoy) and a vector DB (Qdrant or Milvus).
+- Implement a simple retrieval pipeline: ingest documents, index, query, and rerank.
+
+5) Systems & MLOps (ongoing)
+- Containerization: Docker, basic Kubernetes concepts.
+- CI/CD: GitHub Actions, model registry concepts, automated tests for models and data.
+- Observability: Prometheus/Grafana basics, structured logging, tracing (OpenTelemetry).
+- Data engineering basics: ETL, message queues (Kafka/RabbitMQ), and stream processing where relevant.
+
+6) Production inference & cost optimization (1–2 months)
+- Deploy a small model with a lightweight inference server (TorchServe, FastAPI + GPU or CPU inference).
+- Experiment with quantization (bitsandbytes), batching, and cost vs latency trade-offs.
+- Learn at least one inference optimization stack (vLLM, Triton) and how to benchmark.
+
+7) Practical projects (capstone)
+- Build an FAQ or knowledge assistant without LLMs (BM25 + templates). Then add an LLM for synthesis.
+- Implement embedding backfill with zero-downtime strategy and an alias switch.
+- Build a small feedback loop: capture signals, create a dataset, run a supervised fine-tune and measure offline gains.
+
+8) Resources & reading list
+- Courses: CS50 / Algorithms (foundations), Stanford CS224n (NLP with deep learning), Fast.ai practical deep learning.
+- Libraries & docs: Hugging Face Transformers, FAISS, PyTorch, vLLM, Triton.
+- Books: "Deep Learning" (Goodfellow), "Designing Data-Intensive Applications" (Kleppmann) for systems context.
+
+Quick tips for interviews and learning
+- Show working code and repos: small end-to-end projects beat theoretical answers.
+- Be explicit about trade-offs: cost, latency, complexity, and safety.
+- Practice explaining a system in 5–7 blocks and name the SLOs and test cases you would add.
+
+If you want a one-page printable hiring rubric or a 3-month learning plan tailored to a junior engineer, I can create that next.
