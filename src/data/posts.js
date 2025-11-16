@@ -7,6 +7,7 @@ import fiveAiAgentsMd from '../content/posts/five-ai-agent-development-strategie
 import apisMd from '../content/posts/apis-explained.md?raw';
 import ghostMd from '../content/posts/the-ghost-in-the-machine.md?raw';
 import prometheusMd from '../content/posts/prometheus-children.md?raw';
+import hiringMd from '../content/posts/hiring-ai-engineer-practical-checklist.md?raw';
 
 // Simple frontmatter parser
 function parseFrontmatter(markdown) {
@@ -105,6 +106,7 @@ const fiveAiAgentsPost = parseFrontmatter(fiveAiAgentsMd);
 const apisPost = parseFrontmatter(apisMd);
 const ghostPost = parseFrontmatter(ghostMd);
 const prometheusPost = parseFrontmatter(prometheusMd);
+const hiringPost = parseFrontmatter(hiringMd);
 
 export const posts = [
   // Newest first
@@ -117,6 +119,16 @@ export const posts = [
     author: prometheusPost.frontmatter.author,
     excerpt: prometheusPost.frontmatter.excerpt,
     content: prometheusPost.content,
+  },
+  {
+    id: hiringPost.frontmatter.id,
+    title: decorateTitle(hiringPost.frontmatter),
+    slug: slugifyTitle(hiringPost.frontmatter) || String(hiringPost.frontmatter.id),
+    date: hiringPost.frontmatter.date,
+    tags: hiringPost.frontmatter.tags,
+    author: hiringPost.frontmatter.author,
+    excerpt: hiringPost.frontmatter.excerpt,
+    content: hiringPost.content,
   },
   {
     id: apisPost.frontmatter.id,
