@@ -232,5 +232,3 @@ Quick tips for interviews and learning
 - Show working code and repos: small end-to-end projects beat theoretical answers.
 - Be explicit about trade-offs: cost, latency, complexity, and safety.
 - Practice explaining a system in 5–7 blocks and name the SLOs and test cases you would add.
-
-If you want a one-page printable hiring rubric or a 3-month learning plan tailored to a junior engineer, I can create that next.
