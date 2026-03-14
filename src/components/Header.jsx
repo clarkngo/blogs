@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
+import SearchBar from './SearchBar';
+import ThemeToggle from './ThemeToggle';
 import './Header.css';
-import logoPng from '../assets/mechanized_flame_wolf_head.png';
 
 function Header() {
   return (
@@ -12,6 +13,11 @@ function Header() {
           </Link>
         </div>
         <p className="header-subtitle">Essays on Education, Technology, and the Future</p>
+
+        <div className="header-controls">
+          <SearchBar />
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );

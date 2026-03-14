@@ -1,0 +1,41 @@
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(37, 99, 235, 0.1);
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.reading-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-accent), #3b82f6);
+  transition: width 0.2s ease;
+  border-radius: 0 2px 2px 0;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.3);
+}
+
+/* Variant for inline progress (e.g., in post cards) */
+.reading-progress.inline {
+  position: relative;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--color-border);
+  overflow: hidden;
+}
+
+.reading-progress.inline .reading-progress-bar {
+  border-radius: 2px;
+  box-shadow: none;
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .reading-progress {
+  background: rgba(59, 130, 246, 0.2);
+}
+
+[data-theme="dark"] .reading-progress-bar {
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+}

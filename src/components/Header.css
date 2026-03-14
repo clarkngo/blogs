@@ -1,74 +1,152 @@
 .header {
-  background-color: var(--color-card);
-  border-bottom: 1px solid var(--color-border);
-  padding: var(--spacing-xl) var(--spacing-md);
-  margin-bottom: var(--spacing-2xl);
+  background: var(--bg-gradient-primary);
+  position: relative;
+  padding: var(--spacing-4xl) var(--spacing-lg) var(--spacing-3xl);
+  margin-bottom: var(--spacing-3xl);
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.05)"><path d="M0,100 C150,90 350,10 500,50 C650,90 850,10 1000,30 L1000,100 Z"/></svg>') repeat-x bottom;
+  background-size: 100% 60px;
 }
 
 .header-container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xl);
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .header-brand {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-xs);
+  gap: var(--spacing-md);
 }
 
 .header-link {
   text-decoration: none;
   color: inherit;
-  transition: opacity 0.2s ease;
+  transition: all var(--transition-normal);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-sm);
 }
 
 .header-link:hover {
-  opacity: 0.8;
+  transform: translateY(-2px);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .header-title {
   font-family: var(--font-serif);
-  font-size: 3rem;
-  font-weight: 800;
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-xs);
-  letter-spacing: -0.02em;
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 900;
+  color: white;
+  margin: 0;
+  letter-spacing: -0.03em;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .header-logo {
-  width: 44px;
-  height: 44px;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  transition: all var(--transition-normal);
+}
+
+.header-logo:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: var(--shadow-xl);
 }
 
 .header-subtitle {
-  font-size: 1.125rem;
-  color: var(--color-secondary);
-  font-weight: 400;
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
   margin: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.02em;
 }
 
+.header-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+  width: 100%;
+  max-width: 800px;
+  padding: var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-2xl);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Mobile optimizations */
 @media (max-width: 768px) {
   .header {
-    padding: var(--spacing-lg) var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-3xl) var(--spacing-md) var(--spacing-2xl);
+    margin-bottom: var(--spacing-2xl);
   }
 
   .header-title {
-    font-size: 2rem;
-  }
-
-  .header-logo {
-    width: 36px;
-    height: 36px;
-    border-radius: 6px;
+    font-size: clamp(2rem, 10vw, 2.5rem);
   }
 
   .header-subtitle {
     font-size: 1rem;
+  }
+
+  .header-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .header-controls {
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+  }
+}
+
+/* Tablet and desktop */
+@media (min-width: 768px) {
+  .header-controls {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-lg) var(--spacing-xl);
+  }
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+  .header {
+    padding: var(--spacing-4xl) var(--spacing-xl);
+  }
+
+  .header-controls {
+    max-width: 900px;
   }
 }

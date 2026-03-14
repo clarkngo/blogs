@@ -1,0 +1,104 @@
+.theme-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle-container {
+  display: flex;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-full);
+  padding: var(--spacing-xs);
+  gap: var(--spacing-xs);
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-lg);
+}
+
+.theme-toggle-button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: none;
+  background: transparent;
+  color: var(--color-tertiary);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all var(--transition-normal);
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-gradient-accent);
+  transition: left var(--transition-normal);
+  z-index: -1;
+  border-radius: var(--radius-full);
+}
+
+.theme-toggle-button:hover {
+  color: var(--color-primary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.theme-toggle-button:hover::before {
+  left: 0;
+}
+
+.theme-toggle-button:hover {
+  color: white;
+}
+
+.theme-toggle-button.active {
+  background: var(--bg-gradient-accent);
+  color: white;
+  box-shadow: var(--shadow-colored);
+  transform: translateY(-2px);
+}
+
+.theme-toggle-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.theme-toggle-label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Compact version for mobile */
+@media (max-width: 768px) {
+  .theme-toggle-label {
+    display: none;
+  }
+
+  .theme-toggle-button {
+    padding: 10px;
+    min-width: 40px;
+    justify-content: center;
+  }
+
+  .theme-toggle-icon {
+    font-size: 18px;
+  }
+}
+
+/* Focus states for accessibility */
+.theme-toggle-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-accent), 0 0 0 4px rgba(37, 99, 235, 0.2);
+}
+
+.theme-toggle-button.active:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 4px var(--color-accent);
+}

@@ -5,13 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/generateFeeds.js",
+    "build:only": "vite build",
+    "feeds": "node scripts/generateFeeds.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "release": "npm run build && git add dist && (git diff --cached --quiet -- dist || git commit -m 'chore(dist): update build artifacts') && git push origin main"
   },
   "dependencies": {
     "dompurify": "^3.3.0",
+    "fuse.js": "^7.1.0",
     "html-react-parser": "^5.2.7",
     "katex": "^0.16.25",
     "react": "^19.1.1",
@@ -21,7 +24,8 @@
     "rehype-katex": "^7.0.1",
     "remark-gfm": "^4.0.1",
     "remark-math": "^6.0.0",
-    "vite-plugin-svgr": "^4.5.0"
+    "vite-plugin-svgr": "^4.5.0",
+    "zustand": "^5.0.11"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
@@ -31,6 +35,7 @@
     "eslint": "^9.36.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.22",
+    "glob": "^13.0.6",
     "globals": "^16.4.0",
     "vite": "^7.1.7",
     "vite-plugin-singlefile": "^2.3.0"

@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useMemo, useState } from 'react';
 import './BlogList.css';
+import SEOHead from './SEOHead';
 
 function BlogList({ posts }) {
-  const [query, setQuery] = useState('');
   const [selectedTags, setSelectedTags] = useState(new Set());
 
   // Collect unique tags from posts
@@ -12,7 +12,6 @@ function BlogList({ posts }) {
     posts.forEach(p => (p.tags || []).forEach(t => set.add(t)));
     return Array.from(set).sort();
   }, [posts]);
-
 
   const toggleTag = (tag) => {
     setSelectedTags(prev => {
@@ -23,14 +22,11 @@ function BlogList({ posts }) {
     });
   };
 
-
   const clearFilters = () => {
-    setQuery('');
     setSelectedTags(new Set());
   };
 
   const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase();
     return posts.filter(post => {
       // Tag filter (OR): if any tag selected, require at least one match
       if (selectedTags.size > 0) {
@@ -38,44 +34,43 @@ function BlogList({ posts }) {
         const has = tags.some(t => selectedTags.has(t));
         if (!has) return false;
       }
-
-
-      if (!q) return true;
-
-      // Search fields: title, excerpt, content, tags
-      const hay = [post.title, post.excerpt, post.content, (post.tags || []).join(' ')].filter(Boolean).join(' ').toLowerCase();
-      return hay.includes(q);
+      return true;
     });
-  }, [posts, query, selectedTags]);
+  }, [posts, selectedTags]);
 
   return (
     <div className="blog-list">
+      <SEOHead
+        title="Thought Journal"
+        description="Essays on Education, Technology, and the Future. Explore insights on AI, engineering, and digital transformation."
+        keywords={['education', 'technology', 'AI', 'engineering', 'blog', 'essays']}
+        type="website"
+      />
 
-      <div className="blog-list-controls">
-        <div className="search-row">
-          <input
-            className="search-input"
-            value={query}
-            onChange={e => setQuery(e.target.value)}
-            placeholder="Search posts by title, excerpt, content or tag..."
-            aria-label="Search posts"
-          />
-          <button className="clear-btn" onClick={clearFilters} aria-label="Clear search and tags">Clear</button>
+      {allTags.length > 0 && (
+        <div className="blog-list-controls">
+          <div className="tag-filter-section">
+            <h3 className="filter-title">Filter by topic</h3>
+            <div className="tag-filter-row" aria-label="Filter by tag">
+              {allTags.map(tag => (
+                <button
+                  key={tag}
+                  type="button"
+                  className={`tag-filter ${selectedTags.has(tag) ? 'active' : ''}`}
+                  onClick={() => toggleTag(tag)}
+                >
+                  {tag}
+                </button>
+              ))}
+              {selectedTags.size > 0 && (
+                <button className="clear-btn" onClick={clearFilters} aria-label="Clear tag filters">
+                  Clear filters
+                </button>
+              )}
+            </div>
+          </div>
         </div>
-
-        <div className="tag-filter-row" aria-label="Filter by tag">
-          {allTags.map(tag => (
-            <button
-              key={tag}
-              type="button"
-              className={`tag-filter ${selectedTags.has(tag) ? 'active' : ''}`}
-              onClick={() => toggleTag(tag)}
-            >
-              {tag}
-            </button>
-          ))}
-        </div>
-  </div>
+      )}
 
   <h2 className="blog-list-title">Recent Posts</h2>
 
@@ -84,7 +79,12 @@ function BlogList({ posts }) {
           <Link to={`/post/${post.slug}`} key={post.slug || post.id} className="blog-card">
             <div className="blog-card-content">
               <h3 className="blog-card-title">{post.title}</h3>
-              <time className="blog-card-date">{post.date}</time>
+              <div className="blog-card-meta">
+                <time className="blog-card-date">{post.date}</time>
+                {post.readingTime && (
+                  <span className="blog-card-reading-time"> · {post.readingTime} min read</span>
+                )}
+              </div>
               {post.excerpt && (
                 <p className="blog-card-excerpt">{post.excerpt}</p>
               )}

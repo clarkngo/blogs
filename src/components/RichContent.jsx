@@ -16,9 +16,9 @@ export default function RichContent({ html }) {
         rehypePlugins={[rehypeKatex]}
         components={{
           // Custom table rendering to add our post-table class
-          table: ({node, ...props}) => <table className="post-table" {...props} />,
+          table: (props) => <table className="post-table" {...props} />,
           // Ensure links open in new tab
-          a: ({node, ...props}) => <a target="_blank" rel="noopener noreferrer" {...props} />
+          a: (props) => <a target="_blank" rel="noopener noreferrer" {...props} />
         }}
       >
         {html}
