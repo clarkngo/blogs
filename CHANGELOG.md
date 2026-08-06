@@ -2,6 +2,23 @@
 
 All notable changes to this blog project will be documented in this file.
 
+## [3.1.1] - 2026-08-06 08:25:00 - QFL Post Cover Image
+
+### Added
+- Cover image reference for QFL post: `public/question-first-learning.png`
+- Hero image + frontmatter `image` on `src/content/posts/question-first-learning.md`
+
+### Modified
+- `src/components/BlogPostView.jsx`: SEO/og image paths that start with `/` resolve from `public/` root (not only `public/posts/<slug>/`)
+
+## [3.1.0] - 2026-08-06 08:20:00 - Question-First Learning Blog Post
+
+### Added
+- New featured blog post: `src/content/posts/question-first-learning.md`
+  - Introduces Question-First Learning (QFL) as an EdTech / professional learning paradigm
+  - Covers microcredential failure modes, prediction error & metacognitive monitoring, the 3-layer QFL framework, and a software engineering incident walkthrough
+  - Frontmatter: id 10, tags Education/EdTech/Pedagogy/Professional Learning/Cognitive Science, author Clark Ngo
+
 ## [3.0.0] - 2026-03-14 - COMPLETE DESIGN TRANSFORMATION 🎨
 
 ### 🎯 **User Request & Problem Solving**
