@@ -177,3 +177,41 @@ The next generation of EdTech will not win by packing more answers into shorter 
 Stop teaching people to retrieve solutions.
 
 Teach them to earn understanding—**question first**.
+
+### References
+
+#### 1. Evaluative Judgment (Developing Assessment Capability in Learners)
+
+**Evaluative judgment** is the capability to operate as an independent judge of the quality of one's own work and the work of others.
+
+- Tai, J., Ajjawi, R., Boud, D., Dawson, P., & Panadero, E. (2018). Developing evaluative judgement: enabling students to make decisions about the quality of their own and others’ work. *Higher Education, 76*(3), 467–481.
+  - **Key contribution:** Establishes evaluative judgment as a core capability for lifelong learning, arguing that education must move beyond receiving feedback to developing students' internal capacity to judge quality.
+- Boud, D., & Soler, R. (2016). Sustainable assessment revisited. *Assessment & Evaluation in Higher Education, 41*(3), 400–413.
+  - **Key contribution:** Proposes that assessment tasks should prepare students to evaluate criteria and make quality judgments beyond formal course boundaries.
+- Panadero, E., Broadbent, J., Boud, D., & Lodge, J. M. (2019). Using formative assessment to develop evaluative judgement. *Assessment & Evaluation in Higher Education, 44*(5), 735–749.
+
+#### 2. Question-First & Student-Generated Questioning
+
+Actively formulating questions requires deeper metacognitive processing than retrieving or memorizing answers.
+
+- Rosenshine, B., Meister, C., & Chapman, S. (1996). Teaching students to generate questions: A review of the intervention studies. *Review of Educational Research, 66*(2), 181–221.
+  - **Key contribution:** Systematic review demonstrating that training students to formulate their own prompts and questions significantly improves comprehension and critical reasoning.
+- King, A. (1992). Comparison of self-questioning, summarizing, and note-taking-review as strategies for learning from lectures. *American Educational Research Journal, 29*(2), 303–323.
+  - **Key contribution:** Highlights guided self-questioning as superior to passive answer consumption for building mental models.
+- Chin, C., & Osborne, J. (2008). Students' questions: a potential resource for teaching and learning science. *Studies in Science Education, 44*(1), 1–39.
+
+#### 3. Problem-First & Inquiry-Based Frameworks
+
+- Hmelo-Silver, C. E. (2004). Problem-based learning: What and how do students learn? *Educational Psychology Review, 16*(3), 235–266.
+  - **Key contribution:** Demonstrates how presenting problems or open questions before delivering answers fosters self-directed learning and flexible knowledge application.
+- Kapur, M. (2016). Productive failure in learning math. *Cognitive Science, 40*(2), 289–316.
+  - **Key contribution:** Shows that engaging with questions/problems before receiving explicit instruction ("Productive Failure") produces deeper conceptual understanding than answer-first instruction.
+
+#### 4. Evaluative Judgment in the Age of Generative AI
+
+As generative AI lowers the cost of answer generation to near zero, the educational focus shifts from answer production to evaluation, prompt synthesis, and critical verification.
+
+- Lodge, J. M., Yang, S., Rowland, A., & Dawson, P. (2023). Assessment in the age of artificial intelligence. *Higher Education Research & Development, 42*(7), 1801–1806.
+  - **Key contribution:** Explores the shift toward evaluating AI output quality and developing critical literacy as primary learning outcomes.
+- Mollick, E. R., & Mollick, L. (2023). Assigning AI: Seven approaches for using AI in class. Wharton School Research Paper / SSRN.
+  - **Key contribution:** Details pedagogical strategies where students use AI as an answer generator while acting as evaluators, critics, and question refiners.
