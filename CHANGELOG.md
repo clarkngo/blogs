@@ -2,6 +2,16 @@
 
 All notable changes to this blog project will be documented in this file.
 
+## [3.1.3] - 2026-08-06 15:40:00 - QFL Reference Integration
+
+### Modified
+- `src/content/posts/question-first-learning.md`: weave reference learnings into the body (not only the bibliography)
+  - Align evaluative judgment with Tai et al. (quality judgment of own/others' work)
+  - Add productive failure / problem-first (Kapur, Hmelo-Silver)
+  - Add guided self-questioning & question generation (King, Rosenshine)
+  - Frame Layer 2–3 as formative & sustainable assessment (Panadero, Boud & Soler)
+  - New section: QFL in the age of generative AI (Lodge et al., Mollick & Mollick)
+
 ## [3.1.2] - 2026-08-06 15:20:00 - QFL References
 
 ### Added
