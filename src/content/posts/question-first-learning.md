@@ -7,7 +7,10 @@ author: "Clark Ngo"
 excerpt: "Most microcredentials train answer retrieval. Experts win with evaluative judgment—the skill of asking the right diagnostic questions before acting. Question-First Learning (QFL) builds that skill into the curriculum."
 keywords: ["Question-First Learning", "QFL", "evaluative judgment", "microcredentials", "professional learning", "metacognition", "prediction error", "instructional design"]
 featured: true
+image: "/question-first-learning.png"
 ---
+
+![Question-First Learning](/blogs/question-first-learning.png)
 
 ### Title Options
 

@@ -2,6 +2,15 @@
 
 All notable changes to this blog project will be documented in this file.
 
+## [3.1.1] - 2026-08-06 08:25:00 - QFL Post Cover Image
+
+### Added
+- Cover image reference for QFL post: `public/question-first-learning.png`
+- Hero image + frontmatter `image` on `src/content/posts/question-first-learning.md`
+
+### Modified
+- `src/components/BlogPostView.jsx`: SEO/og image paths that start with `/` resolve from `public/` root (not only `public/posts/<slug>/`)
+
 ## [3.1.0] - 2026-08-06 08:20:00 - Question-First Learning Blog Post
 
 ### Added

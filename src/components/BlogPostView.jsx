@@ -26,7 +26,11 @@ function BlogPostView() {
   }
 
   const postUrl = `/#/post/${post.slug}`;
-  const postImage = post.image ? `/posts/${post.filePath}/${post.image}` : null;
+  const postImage = !post.image
+    ? null
+    : post.image.startsWith('/')
+      ? post.image
+      : `/posts/${post.filePath}/${post.image}`;
 
   return (
     <div className="blog-post-view">
