@@ -2,6 +2,15 @@
 
 All notable changes to this blog project will be documented in this file.
 
+## [3.1.2] - 2026-08-06 15:20:00 - QFL References
+
+### Added
+- Academic references section on `src/content/posts/question-first-learning.md`
+  - Evaluative judgment (Tai et al.; Boud & Soler; Panadero et al.)
+  - Student-generated questioning (Rosenshine et al.; King; Chin & Osborne)
+  - Problem-first / inquiry frameworks (Hmelo-Silver; Kapur)
+  - Generative AI & evaluative judgment (Lodge et al.; Mollick & Mollick)
+
 ## [3.1.1] - 2026-08-06 08:25:00 - QFL Post Cover Image
 
 ### Added
