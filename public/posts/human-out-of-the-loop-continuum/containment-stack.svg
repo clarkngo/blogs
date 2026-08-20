@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1120" height="720" viewBox="0 0 1120 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Containment architecture: an untrusted AI engine's action proposals pass through a deterministic shield and hardware interlocks before reaching the target environment, with a circuit breaker that trips on violation">
+  <defs>
+    <style>
+      .bg{fill:#0f172a}
+      .title{font:700 24px/1.2 -apple-system,Segoe UI,Roboto,Arial,sans-serif;fill:#f8fafc}
+      .sub{font:400 14px/1.3 -apple-system,Segoe UI,Roboto,Arial,sans-serif;fill:#94a3b8}
+      .lbl{font:700 18px/1.2 -apple-system,Segoe UI,Roboto,Arial,sans-serif;fill:#f8fafc}
+      .lbls{font:400 12.5px/1.3 -apple-system,Segoe UI,Roboto,Arial,sans-serif;fill:#cbd5e1}
+      .chk{font:700 13px/1.2 -apple-system,Segoe UI,Roboto,Arial,sans-serif;fill:#0f172a}
+      .chks{font:400 11px/1.2 -apple-system,Segoe UI,Roboto,Arial,sans-serif;fill:#1e293b}
+      .flow{font:600 12px/1.2 -apple-system,Segoe UI,Roboto,Arial,sans-serif;fill:#7dd3fc}
+      .trip{font:700 12px/1.2 -apple-system,Segoe UI,Roboto,Arial,sans-serif;fill:#fca5a5}
+    </style>
+    <marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="a2r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1120" height="720" rx="16"/>
+  <text class="title" x="40" y="52">Containment When the Human Is Gone</text>
+  <text class="sub" x="40" y="76">The AI engine is treated as untrusted software. It only proposes; deterministic layers decide what actually executes.</text>
+
+  <!-- Untrusted AI Engine -->
+  <rect x="310" y="104" width="500" height="78" rx="12" fill="#1e293b" stroke="#475569" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text class="lbl" x="560" y="140" text-anchor="middle" fill="#e2e8f0">⚠  UNTRUSTED AI ENGINE</text>
+  <text class="lbls" x="560" y="162" text-anchor="middle">Generates candidate actions at machine speed — never trusted to reach the world directly</text>
+
+  <path d="M560 182 L560 214" stroke="#38bdf8" stroke-width="3" fill="none" marker-end="url(#a2)"/>
+  <text class="flow" x="574" y="203">action proposal</text>
+
+  <!-- Deterministic Shield / Verifier -->
+  <rect x="90" y="220" width="940" height="200" rx="14" fill="#0b1220" stroke="#334155" stroke-width="1.5"/>
+  <text class="lbl" x="120" y="252" fill="#f8fafc">Deterministic Shield / Verifier</text>
+  <text class="lbls" x="120" y="272">Zero-AI, formally verifiable. Every payload is checked against invariants before it is signed and passed on.</text>
+
+  <!-- three check cards -->
+  <g>
+    <rect x="120" y="292" width="272" height="106" rx="10" fill="#38bdf8"/>
+    <text class="chk" x="256" y="322" text-anchor="middle">Invariant Policy Check</text>
+    <text class="chks" x="256" y="344" text-anchor="middle">Rule-set of hard safe states:</text>
+    <text class="chks" x="256" y="362" text-anchor="middle">thermal, speed, order-size caps.</text>
+    <text class="chks" x="256" y="382" text-anchor="middle">Illegal action → blocked.</text>
+  </g>
+  <g>
+    <rect x="424" y="292" width="272" height="106" rx="10" fill="#818cf8"/>
+    <text class="chk" x="560" y="322" text-anchor="middle">Rate &amp; Blast-Radius</text>
+    <text class="chks" x="560" y="344" text-anchor="middle">Leaky-bucket token budgets:</text>
+    <text class="chks" x="560" y="362" text-anchor="middle">max $/sec, velocity, API/min.</text>
+    <text class="chks" x="560" y="382" text-anchor="middle">Empty bucket → safe pause.</text>
+  </g>
+  <g>
+    <rect x="728" y="292" width="272" height="106" rx="10" fill="#34d399"/>
+    <text class="chk" x="864" y="322" text-anchor="middle">Safe-State-Space Check</text>
+    <text class="chks" x="864" y="344" text-anchor="middle">Provably-safe region (shield).</text>
+    <text class="chks" x="864" y="362" text-anchor="middle">Leaves the set → override with</text>
+    <text class="chks" x="864" y="382" text-anchor="middle">nearest safe alternative.</text>
+  </g>
+
+  <path d="M560 420 L560 452" stroke="#38bdf8" stroke-width="3" fill="none" marker-end="url(#a2)"/>
+  <text class="flow" x="574" y="441">all checks pass</text>
+
+  <!-- Hardware / API interlocks -->
+  <rect x="90" y="458" width="940" height="86" rx="14" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+  <text class="lbl" x="560" y="492" text-anchor="middle" fill="#e2e8f0">HARDWARE / API INTERLOCKS</text>
+  <text class="lbls" x="560" y="516" text-anchor="middle">Out-of-band enforcers that physically drop the connection on violation — independent of the AI stack.</text>
+
+  <path d="M560 544 L560 588" stroke="#38bdf8" stroke-width="3" fill="none" marker-end="url(#a2)"/>
+  <text class="flow" x="574" y="570">approved execution</text>
+
+  <!-- Target environment -->
+  <rect x="360" y="594" width="400" height="76" rx="12" fill="#0ea5e9"/>
+  <text class="lbl" x="560" y="628" text-anchor="middle" fill="#04263a">TARGET ENVIRONMENT</text>
+  <text class="lbls" x="560" y="650" text-anchor="middle" fill="#083549">markets · actuators · infrastructure · other agents</text>
+
+  <!-- Circuit breaker / trip path down the right side -->
+  <path d="M1030 501 L1076 501 L1076 340 L1002 340" stroke="#ef4444" stroke-width="3" fill="none" marker-end="url(#a2r)" stroke-dasharray="7 5"/>
+  <text class="trip" x="1082" y="418" transform="rotate(90 1082 418)" text-anchor="middle">CIRCUIT BREAKER TRIPS → halt + rollback + freeze audit log</text>
+</svg>
