@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1120" height="600" viewBox="0 0 1120 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The six-stage autonomy continuum from Human-in-the-Loop to Autonomous Self-Evolution, showing latency falling and unrecoverable risk rising">
+  <defs>
+    <style>
+      .bg{fill:#0f172a}
+      .title{font:700 24px/1.2 -apple-system,Segoe UI,Roboto,Arial,sans-serif;fill:#f8fafc}
+      .sub{font:400 14px/1.3 -apple-system,Segoe UI,Roboto,Arial,sans-serif;fill:#94a3b8}
+      .abbr{font:700 20px/1 -apple-system,Segoe UI,Roboto,Arial,sans-serif;fill:#0f172a}
+      .name{font:600 11px/1.2 -apple-system,Segoe UI,Roboto,Arial,sans-serif;fill:#0f172a}
+      .role{font:400 10.5px/1.2 -apple-system,Segoe UI,Roboto,Arial,sans-serif;fill:#1e293b}
+      .num{font:700 12px/1 -apple-system,Segoe UI,Roboto,Arial,sans-serif;fill:#0f172a}
+      .axis{font:700 13px/1.2 -apple-system,Segoe UI,Roboto,Arial,sans-serif;fill:#e2e8f0}
+      .axisq{font:400 11.5px/1.2 -apple-system,Segoe UI,Roboto,Arial,sans-serif;fill:#94a3b8}
+    </style>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#64748b"/>
+    </marker>
+    <linearGradient id="spectrum" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22c55e"/>
+      <stop offset="0.5" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="latfade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0.15"/>
+    </linearGradient>
+    <linearGradient id="riskfade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ef4444" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#ef4444" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1120" height="600" rx="16"/>
+  <text class="title" x="40" y="52">The Autonomy Continuum</text>
+  <text class="sub" x="40" y="76">As the human steps out, latency collapses toward machine speed — and the cost of a wrong action becomes harder to recover from.</text>
+
+  <!-- Stage pills -->
+  <!-- slot width 173.33, centers at 126.7, 300, 473.3, 646.7, 820, 993.3 -->
+  <g>
+    <!-- 1 HITL -->
+    <rect x="51.7" y="108" width="150" height="96" rx="12" fill="#22c55e"/>
+    <circle cx="70" cy="126" r="11" fill="#ffffff" opacity="0.85"/>
+    <text class="num" x="70" y="130" text-anchor="middle">1</text>
+    <text class="abbr" x="126.7" y="150" text-anchor="middle">HITL</text>
+    <text class="name" x="126.7" y="170" text-anchor="middle">Human-in-the-Loop</text>
+    <text class="role" x="126.7" y="188" text-anchor="middle">Operator · direct control</text>
+    <!-- 2 HOTL -->
+    <rect x="225" y="108" width="150" height="96" rx="12" fill="#a3d635"/>
+    <circle cx="243.3" cy="126" r="11" fill="#ffffff" opacity="0.85"/>
+    <text class="num" x="243.3" y="130" text-anchor="middle">2</text>
+    <text class="abbr" x="300" y="150" text-anchor="middle">HOTL</text>
+    <text class="name" x="300" y="170" text-anchor="middle">Human-on-the-Loop</text>
+    <text class="role" x="300" y="188" text-anchor="middle">Supervisor · override</text>
+    <!-- 3 HOOTL -->
+    <rect x="398.3" y="108" width="150" height="96" rx="12" fill="#f59e0b"/>
+    <circle cx="416.7" cy="126" r="11" fill="#ffffff" opacity="0.85"/>
+    <text class="num" x="416.7" y="130" text-anchor="middle">3</text>
+    <text class="abbr" x="473.3" y="150" text-anchor="middle">HOOTL</text>
+    <text class="name" x="473.3" y="170" text-anchor="middle">Human-out-of-the-Loop</text>
+    <text class="role" x="473.3" y="188" text-anchor="middle">Absent · post-hoc audit</text>
+    <!-- 4 HGTL -->
+    <rect x="571.7" y="108" width="150" height="96" rx="12" fill="#fb923c"/>
+    <circle cx="590" cy="126" r="11" fill="#ffffff" opacity="0.85"/>
+    <text class="num" x="590" y="130" text-anchor="middle">4</text>
+    <text class="abbr" x="646.7" y="150" text-anchor="middle">HGTL</text>
+    <text class="name" x="646.7" y="170" text-anchor="middle">Human-Governing-Loop</text>
+    <text class="role" x="646.7" y="188" text-anchor="middle">Policy architect</text>
+    <!-- 5 EITL -->
+    <rect x="745" y="108" width="150" height="96" rx="12" fill="#f97316"/>
+    <circle cx="763.3" cy="126" r="11" fill="#ffffff" opacity="0.85"/>
+    <text class="num" x="763.3" y="130" text-anchor="middle">5</text>
+    <text class="abbr" x="820" y="150" text-anchor="middle">EITL</text>
+    <text class="name" x="820" y="170" text-anchor="middle">Ecosystem-in-the-Loop</text>
+    <text class="role" x="820" y="188" text-anchor="middle">Strategic principal</text>
+    <!-- 6 ASE -->
+    <rect x="918.3" y="108" width="150" height="96" rx="12" fill="#ef4444"/>
+    <circle cx="936.7" cy="126" r="11" fill="#ffffff" opacity="0.85"/>
+    <text class="num" x="936.7" y="130" text-anchor="middle">6</text>
+    <text class="abbr" x="993.3" y="150" text-anchor="middle">ASE</text>
+    <text class="name" x="993.3" y="170" text-anchor="middle">Autonomous Self-Evolve</text>
+    <text class="role" x="993.3" y="188" text-anchor="middle">Distant observer</text>
+  </g>
+
+  <!-- connecting arrows between pills -->
+  <g stroke="#64748b" stroke-width="2.5" fill="none">
+    <path d="M201.7 156 L223 156" marker-end="url(#ar)"/>
+    <path d="M375 156 L396.3 156" marker-end="url(#ar)"/>
+    <path d="M548.3 156 L569.7 156" marker-end="url(#ar)"/>
+    <path d="M721.7 156 L743 156" marker-end="url(#ar)"/>
+    <path d="M895 156 L916.3 156" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- spectrum reference bar -->
+  <rect x="51.7" y="236" width="1016.6" height="10" rx="5" fill="url(#spectrum)"/>
+
+  <!-- Latency trend (falling) -->
+  <g>
+    <text class="axis" x="51.7" y="300">System latency &amp; human reaction time</text>
+    <text class="axisq" x="51.7" y="318">how long an action takes to reach the world</text>
+    <path d="M60 360 L1060 470" stroke="url(#latfade)" stroke-width="4" fill="none"/>
+    <circle cx="60" cy="360" r="5" fill="#38bdf8"/>
+    <circle cx="1060" cy="470" r="5" fill="#38bdf8" opacity="0.5"/>
+    <text class="axisq" x="60" y="350" fill="#7dd3fc">HIGH — human-paced</text>
+    <text class="axisq" x="1060" y="490" text-anchor="end" fill="#7dd3fc">VERY LOW — processor speed</text>
+  </g>
+
+  <!-- Risk trend (rising) -->
+  <g>
+    <text class="axis" x="1068.3" y="300" text-anchor="end">Unrecoverable-failure risk</text>
+    <text class="axisq" x="1068.3" y="318" text-anchor="end">damage possible before anyone can intervene</text>
+    <path d="M60 540 L1060 400" stroke="url(#riskfade)" stroke-width="4" fill="none"/>
+    <circle cx="60" cy="540" r="5" fill="#ef4444" opacity="0.5"/>
+    <circle cx="1060" cy="400" r="5" fill="#ef4444"/>
+    <text class="axisq" x="60" y="560" fill="#fca5a5">LOW — localized errors</text>
+    <text class="axisq" x="1060" y="390" text-anchor="end" fill="#fca5a5">UNQUANTIFIABLE — cascade</text>
+  </g>
+</svg>
