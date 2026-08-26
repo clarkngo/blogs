@@ -75,35 +75,62 @@ function BlogList({ posts }) {
   <h2 className="blog-list-title">Recent Posts</h2>
 
   <div className="blog-list-grid">
-        {filtered.map(post => (
-          <Link to={`/post/${post.slug}`} key={post.slug || post.id} className="blog-card">
-            <div className="blog-card-content">
-              <h3 className="blog-card-title">{post.title}</h3>
-              <div className="blog-card-meta">
-                <time className="blog-card-date">{post.date}</time>
-                {post.readingTime && (
-                  <span className="blog-card-reading-time"> · {post.readingTime} min read</span>
+        {filtered.map(post => {
+          const cardBody = (
+            <>
+              <div className="blog-card-content">
+                {post.source && (
+                  <span className="blog-card-source">{post.source}</span>
                 )}
-              </div>
-              {post.excerpt && (
-                <p className="blog-card-excerpt">{post.excerpt}</p>
-              )}
-              {post.tags && post.tags.length > 0 && (
-                <div className="blog-card-tags">
-                  {post.tags.slice(0, 3).map((tag, index) => (
-                    <span key={index} className="blog-card-tag">{tag}</span>
-                  ))}
-                  {post.tags.length > 3 && (
-                    <span className="blog-card-tag-more">+{post.tags.length - 3}</span>
+                <h3 className="blog-card-title">{post.title}</h3>
+                <div className="blog-card-meta">
+                  <time className="blog-card-date">{post.date}</time>
+                  {post.readingTime && (
+                    <span className="blog-card-reading-time"> · {post.readingTime} min read</span>
                   )}
                 </div>
-              )}
-            </div>
-            <div className="blog-card-footer">
-              <span className="read-more">Read More →</span>
-            </div>
-          </Link>
-        ))}
+                {post.excerpt && (
+                  <p className="blog-card-excerpt">{post.excerpt}</p>
+                )}
+                {post.tags && post.tags.length > 0 && (
+                  <div className="blog-card-tags">
+                    {post.tags.slice(0, 3).map((tag, index) => (
+                      <span key={index} className="blog-card-tag">{tag}</span>
+                    ))}
+                    {post.tags.length > 3 && (
+                      <span className="blog-card-tag-more">+{post.tags.length - 3}</span>
+                    )}
+                  </div>
+                )}
+              </div>
+              <div className="blog-card-footer">
+                <span className="read-more">
+                  {post.externalUrl ? `Read on ${post.source || 'original site'} ↗` : 'Read More →'}
+                </span>
+              </div>
+            </>
+          );
+
+          return post.externalUrl ? (
+            <a
+              key={post.slug || post.id}
+              href={post.externalUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="blog-card"
+            >
+              {cardBody}
+            </a>
+          ) : (
+            <Link
+              key={post.slug || post.id}
+              to={`/post/${post.slug}`}
+              className="blog-card"
+            >
+              {cardBody}
+            </Link>
+          );
+        })}
       </div>
     </div>
   );

@@ -157,6 +157,8 @@ export function loadPosts() {
       image: frontmatter.image,
       keywords: frontmatter.keywords || [],
       lastModified: frontmatter.lastModified || frontmatter.date,
+      externalUrl: frontmatter.externalUrl,
+      source: frontmatter.source,
       // Extract file path for potential future use
       filePath: path.replace('../content/posts/', '').replace('.md', '')
     };

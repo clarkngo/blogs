@@ -173,6 +173,16 @@
   flex-direction: column;
 }
 
+.blog-card-source {
+  display: inline-block;
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-sm);
+}
+
 .blog-card-title {
   font-family: var(--font-serif);
   font-size: 1.75rem;

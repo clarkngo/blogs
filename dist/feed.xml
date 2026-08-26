@@ -5,7 +5,7 @@
     <description>Essays on Education, Technology, and the Future</description>
     <link>https://clarkngo.github.io/blogs</link>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Aug 2026 00:32:57 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 17:41:32 GMT</lastBuildDate>
     <atom:link href="https://clarkngo.github.io/blogs/feed.xml" rel="self" type="application/rss+xml" />
     <generator>Thought Journal Blog</generator>
     <image>
@@ -163,6 +163,75 @@
       <category><![CDATA[Blooms Taxonomy]]></category>
       <category><![CDATA[Pedagogy]]></category>
       <content:encoded><![CDATA[<p>!<a href="/blogs/posts/ai-bloom/ai-bloom-taxonomy-pyramids.svg">Bloom's Taxonomy Pyramids</a></p><p>The advent of <strong>Artificial Intelligence (AI)</strong> is not rendering <strong>Bloom's Taxonomy</strong> obsolete; instead, it's forcing a <strong>re-contextualization</strong> of the framework. AI shifts the focus of human learning from lower-order tasks to complex, higher-order thinking, essentially redefining the cognitive partnership between human and machine.</p><p><h2>🤖 AI and Bloom's Taxonomy: A New Cognitive Partnership</h2></p><p>Bloom's Taxonomy, which classifies cognitive skills from simple (Remembering) to complex (Creating), remains a vital tool for educators. However, the capabilities of generative AI (like large language models) challenge traditional educational objectives, particularly at the foundational levels.</p><p>| Bloom's Level (Revised) | AI's Role (The Machine) | Human's Redefined Focus (The Learner) |<br>| :--- | :--- | :--- |<br>| <strong>1. Remembering</strong> | <strong>Excels</strong> at retrieving facts and basic information quickly. | <strong>Focuses</strong> on <em>information-poor recall</em> (when technology isn't accessible) and knowing <em>when</em> to use AI for retrieval. |<br>| <strong>2. Understanding</strong> | <strong>Strong</strong> at summarizing, translating, and explaining concepts based on patterns. | <strong>Emphasizes</strong> <em>true human comprehension</em>, contextualizing answers, and explaining the <strong>significance</strong> and <strong>nuance</strong> of information. |<br>| <strong>3. Applying</strong> | <strong>Competent</strong> at executing procedures, models, or methods (e.g., generating draft code or documents). | <strong>Prioritizes</strong> real-world implementation, experimentation, and applying <strong>judgment</strong> and <strong>creativity</strong> to solution development. |<br>| <strong>4. Analyzing</strong> | <strong>Superhuman</strong> speed at breaking down vast datasets, identifying trends, and comparing/contrasting. | <strong>Elevates</strong> to <strong>critical thinking</strong>, justifying the analysis, and reasoning within <strong>ethical, cultural, and cognitive domains</strong>. |<br>| <strong>5. Evaluating</strong> | <strong>Assists</strong> by identifying pros/cons and developing evaluation rubrics based on quantifiable data. | <strong>Concentrates</strong> on <strong>ethical judgment</strong>, holistic appraisal of consequences, and <strong>metacognitive reflection</strong> on the value of the information. |<br>| <strong>6. Creating</strong> | <strong>Generates</strong> content and suggests alternatives, acting as a brainstorming partner. | <strong>Concentrates</strong> on producing <strong>original solutions</strong> leveraging <strong>human lived experiences, intuition, and unique judgment</strong> to refine and build upon AI outputs. |</p><p>---</p><p><h2>🔑 Key Shifts in Education</h2></p><p>The integration of AI necessitates specific pedagogical adjustments informed by Bloom's Taxonomy:</p><p><h3>1. Re-Focusing on Higher-Order Thinking Skills (HOTS)</h3></p><p>Since AI capably handles <strong>Lower-Order Thinking Skills (LOTS)</strong> like Remembering and Understanding, education must <strong>re-prioritize HOTS</strong> (Analyzing, Evaluating, Creating). The goal is no longer to be a repository of facts, but to be a <strong>critical thinker</strong> and <strong>innovator</strong>.</p><p><h3>2. Designing AI-Resilient Assessments</h3></p><p>Assignments that rely purely on basic recall or summarization are now easily automated by AI. New assessments must require students to:<br>* <strong>Evaluate</strong> the accuracy, bias, or ethical implications of AI-generated content.<br>* <strong>Analyze</strong> complex problems and <strong>Create</strong> solutions that integrate AI tools, while demonstrating original human judgment and synthesis.</p><p><h3>3. Fostering AI Literacy</h3></p><p>A crucial new dimension to the "Understanding" and "Evaluating" levels is <strong>AI literacy</strong>. Learners must be taught how AI works, its inherent limitations, and the appropriate ethical use of these tools, ensuring they can critically reflect on and effectively manage the outputs provided by the AI.</p><p>---</p><p>!<a href="/blogs/posts/ai-bloom/ai-bloom-taxonomy-selection.svg">Bloom's Visual Selection</a></p><p><h2>📚 Sources</h2></p><p>* Using Bloom's Taxonomy for Artificial Intelligence Learning - HR Bartender<br>* What Bloom's Taxonomy Can Teach Us About AI | Getting Smart<br>* Bloom's Taxonomy in the Interaction Between Artificial Intelligence and Human Learning - viden.ai<br>* Bloom's Taxonomy Revisited – Artificial Intelligence Tools – Faculty Support | Oregon State Ecampus<br>* The impact of generative AI on university students' learning outcomes via Bloom's taxonomy: a meta-analysis and pattern mining approach - Taylor & Francis Online</p>]]></content:encoded>
+    </item>
+    <item>
+      <title><![CDATA[How to Connect Amazon EC2 Using Microsoft Remote Desktop in macOS]]></title>
+      <description><![CDATA[A step-by-step tutorial on launching a Windows Server instance on AWS EC2, configuring security groups, retrieving credentials, and connecting via Microsoft Remote Desktop on macOS.]]></description>
+      <link>https://clarkngo.github.io/blogs/#/post/how-to-connect-amazon-ec2-using-microsoft-remote-desktop-in-macos</link>
+      <guid isPermaLink="false">https://clarkngo.github.io/blogs/#/post/how-to-connect-amazon-ec2-using-microsoft-remote-desktop-in-macos</guid>
+      <pubDate>Thu, 09 Apr 2020 07:00:00 GMT</pubDate>
+      <author>noreply@clarkngo.com (Clark Jason Ngo)</author>
+      <category><![CDATA[AWS]]></category>
+      <category><![CDATA[Tutorial]]></category>
+      <category><![CDATA[Cloud]]></category>
+      <content:encoded><![CDATA[<p>Originally published on freeCodeCamp News. <a href="https://www.freecodecamp.org/news/ec2-with-microsoft-remote-desktop/">Read it there →</a><br></p>]]></content:encoded>
+    </item>
+    <item>
+      <title><![CDATA[How to Import a Sample Database to your AWS RDS Microsoft SQL Server Using S3]]></title>
+      <description><![CDATA[A guide on setting up AWS RDS MSSQL, creating S3 integration via Option Groups, and restoring .bak backup files with native stored procedures.]]></description>
+      <link>https://clarkngo.github.io/blogs/#/post/how-to-import-a-sample-database-to-your-aws-rds-microsoft-sql-server-using-s3</link>
+      <guid isPermaLink="false">https://clarkngo.github.io/blogs/#/post/how-to-import-a-sample-database-to-your-aws-rds-microsoft-sql-server-using-s3</guid>
+      <pubDate>Sun, 29 Mar 2020 07:00:00 GMT</pubDate>
+      <author>noreply@clarkngo.com (Clark Jason Ngo)</author>
+      <category><![CDATA[AWS]]></category>
+      <category><![CDATA[Tutorial]]></category>
+      <category><![CDATA[Cloud]]></category>
+      <content:encoded><![CDATA[<p>Originally published on freeCodeCamp News. <a href="https://www.freecodecamp.org/news/cjn-how-to-import-a-sample-database-to-your-aws-rds-microsoft-sql-server-using-s3/">Read it there →</a><br></p>]]></content:encoded>
+    </item>
+    <item>
+      <title><![CDATA[How to teach yourself to learn again]]></title>
+      <description><![CDATA[A reflection and actionable guide on habit building, overcoming study fatigue, knowledge retention techniques, and managing digital distractions after returning to academia.]]></description>
+      <link>https://clarkngo.github.io/blogs/#/post/how-to-teach-yourself-to-learn-again</link>
+      <guid isPermaLink="false">https://clarkngo.github.io/blogs/#/post/how-to-teach-yourself-to-learn-again</guid>
+      <pubDate>Fri, 28 Jun 2019 07:00:00 GMT</pubDate>
+      <author>noreply@clarkngo.com (Clark Jason Ngo)</author>
+      <category><![CDATA[Career]]></category>
+      <category><![CDATA[Learning]]></category>
+      <content:encoded><![CDATA[<p>Originally published on freeCodeCamp News. <a href="https://www.freecodecamp.org/news/cjn-how-to-teach-yourself-to-learn-again/">Read it there →</a><br></p>]]></content:encoded>
+    </item>
+    <item>
+      <title><![CDATA[Understanding Hello World in Node.js]]></title>
+      <description><![CDATA[A breakdown explaining the components of a standard Node.js Hello World HTTP server script line-by-line with visual diagrams.]]></description>
+      <link>https://clarkngo.github.io/blogs/#/post/understanding-hello-world-in-nodejs</link>
+      <guid isPermaLink="false">https://clarkngo.github.io/blogs/#/post/understanding-hello-world-in-nodejs</guid>
+      <pubDate>Thu, 27 Jun 2019 07:00:00 GMT</pubDate>
+      <author>noreply@clarkngo.com (Clark Jason Ngo)</author>
+      <category><![CDATA[Tutorial]]></category>
+      <category><![CDATA[Engineering]]></category>
+      <content:encoded><![CDATA[<p>Originally published on freeCodeCamp News. <a href="https://www.freecodecamp.org/news/cjn-understanding-hello-world-in-nodejs/">Read it there →</a><br></p>]]></content:encoded>
+    </item>
+    <item>
+      <title><![CDATA[Why I abandoned my MBA to get a master's in Computer Science]]></title>
+      <description><![CDATA[A personal journey narrative detailing career transitions from finance to software engineering, attending meetups/hackathons, and switching graduate programs.]]></description>
+      <link>https://clarkngo.github.io/blogs/#/post/why-i-abandoned-my-mba-to-get-a-masters-in-computer-science</link>
+      <guid isPermaLink="false">https://clarkngo.github.io/blogs/#/post/why-i-abandoned-my-mba-to-get-a-masters-in-computer-science</guid>
+      <pubDate>Sun, 23 Jun 2019 07:00:00 GMT</pubDate>
+      <author>noreply@clarkngo.com (Clark Jason Ngo)</author>
+      <category><![CDATA[Career]]></category>
+      <category><![CDATA[Technology]]></category>
+      <content:encoded><![CDATA[<p>Originally published on freeCodeCamp News. <a href="https://www.freecodecamp.org/news/cjn-why-i-abandoned-my-mba-to-get-a-masters-in-computer-science/">Read it there →</a><br></p>]]></content:encoded>
+    </item>
+    <item>
+      <title><![CDATA[Please ask questions early and often if you don't know how to do something]]></title>
+      <description><![CDATA[Insights on mentorship, developer mindset, debugging workflows, and best practices for communicating blockers effectively.]]></description>
+      <link>https://clarkngo.github.io/blogs/#/post/please-ask-questions-early-and-often-if-you-dont-know-how-to-do-something</link>
+      <guid isPermaLink="false">https://clarkngo.github.io/blogs/#/post/please-ask-questions-early-and-often-if-you-dont-know-how-to-do-something</guid>
+      <pubDate>Tue, 18 Jun 2019 07:00:00 GMT</pubDate>
+      <author>noreply@clarkngo.com (Clark Jason Ngo)</author>
+      <category><![CDATA[Career]]></category>
+      <category><![CDATA[Engineering]]></category>
+      <category><![CDATA[Leadership]]></category>
+      <content:encoded><![CDATA[<p>Originally published on freeCodeCamp News. <a href="https://www.freecodecamp.org/news/cjn-please-ask-questions-early-and-often-if-you-dont-know-how-to-do-something/">Read it there →</a><br></p>]]></content:encoded>
     </item>
   </channel>
 </rss>

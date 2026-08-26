@@ -233,6 +233,117 @@
         "Blooms Taxonomy",
         "Pedagogy"
       ]
+    },
+    {
+      "id": "https://clarkngo.github.io/blogs/#/post/how-to-connect-amazon-ec2-using-microsoft-remote-desktop-in-macos",
+      "url": "https://clarkngo.github.io/blogs/#/post/how-to-connect-amazon-ec2-using-microsoft-remote-desktop-in-macos",
+      "title": "How to Connect Amazon EC2 Using Microsoft Remote Desktop in macOS",
+      "content_html": "<p>Originally published on freeCodeCamp News. <a href=\"https://www.freecodecamp.org/news/ec2-with-microsoft-remote-desktop/\">Read it there →</a><br></p>",
+      "summary": "A step-by-step tutorial on launching a Windows Server instance on AWS EC2, configuring security groups, retrieving credentials, and connecting via Microsoft Remote Desktop on macOS.",
+      "date_published": "2020-04-09T07:00:00.000Z",
+      "date_modified": "2020-04-09T07:00:00.000Z",
+      "authors": [
+        {
+          "name": "Clark Jason Ngo"
+        }
+      ],
+      "tags": [
+        "AWS",
+        "Tutorial",
+        "Cloud"
+      ]
+    },
+    {
+      "id": "https://clarkngo.github.io/blogs/#/post/how-to-import-a-sample-database-to-your-aws-rds-microsoft-sql-server-using-s3",
+      "url": "https://clarkngo.github.io/blogs/#/post/how-to-import-a-sample-database-to-your-aws-rds-microsoft-sql-server-using-s3",
+      "title": "How to Import a Sample Database to your AWS RDS Microsoft SQL Server Using S3",
+      "content_html": "<p>Originally published on freeCodeCamp News. <a href=\"https://www.freecodecamp.org/news/cjn-how-to-import-a-sample-database-to-your-aws-rds-microsoft-sql-server-using-s3/\">Read it there →</a><br></p>",
+      "summary": "A guide on setting up AWS RDS MSSQL, creating S3 integration via Option Groups, and restoring .bak backup files with native stored procedures.",
+      "date_published": "2020-03-29T07:00:00.000Z",
+      "date_modified": "2020-03-29T07:00:00.000Z",
+      "authors": [
+        {
+          "name": "Clark Jason Ngo"
+        }
+      ],
+      "tags": [
+        "AWS",
+        "Tutorial",
+        "Cloud"
+      ]
+    },
+    {
+      "id": "https://clarkngo.github.io/blogs/#/post/how-to-teach-yourself-to-learn-again",
+      "url": "https://clarkngo.github.io/blogs/#/post/how-to-teach-yourself-to-learn-again",
+      "title": "How to teach yourself to learn again",
+      "content_html": "<p>Originally published on freeCodeCamp News. <a href=\"https://www.freecodecamp.org/news/cjn-how-to-teach-yourself-to-learn-again/\">Read it there →</a><br></p>",
+      "summary": "A reflection and actionable guide on habit building, overcoming study fatigue, knowledge retention techniques, and managing digital distractions after returning to academia.",
+      "date_published": "2019-06-28T07:00:00.000Z",
+      "date_modified": "2019-06-28T07:00:00.000Z",
+      "authors": [
+        {
+          "name": "Clark Jason Ngo"
+        }
+      ],
+      "tags": [
+        "Career",
+        "Learning"
+      ]
+    },
+    {
+      "id": "https://clarkngo.github.io/blogs/#/post/understanding-hello-world-in-nodejs",
+      "url": "https://clarkngo.github.io/blogs/#/post/understanding-hello-world-in-nodejs",
+      "title": "Understanding Hello World in Node.js",
+      "content_html": "<p>Originally published on freeCodeCamp News. <a href=\"https://www.freecodecamp.org/news/cjn-understanding-hello-world-in-nodejs/\">Read it there →</a><br></p>",
+      "summary": "A breakdown explaining the components of a standard Node.js Hello World HTTP server script line-by-line with visual diagrams.",
+      "date_published": "2019-06-27T07:00:00.000Z",
+      "date_modified": "2019-06-27T07:00:00.000Z",
+      "authors": [
+        {
+          "name": "Clark Jason Ngo"
+        }
+      ],
+      "tags": [
+        "Tutorial",
+        "Engineering"
+      ]
+    },
+    {
+      "id": "https://clarkngo.github.io/blogs/#/post/why-i-abandoned-my-mba-to-get-a-masters-in-computer-science",
+      "url": "https://clarkngo.github.io/blogs/#/post/why-i-abandoned-my-mba-to-get-a-masters-in-computer-science",
+      "title": "Why I abandoned my MBA to get a master's in Computer Science",
+      "content_html": "<p>Originally published on freeCodeCamp News. <a href=\"https://www.freecodecamp.org/news/cjn-why-i-abandoned-my-mba-to-get-a-masters-in-computer-science/\">Read it there →</a><br></p>",
+      "summary": "A personal journey narrative detailing career transitions from finance to software engineering, attending meetups/hackathons, and switching graduate programs.",
+      "date_published": "2019-06-23T07:00:00.000Z",
+      "date_modified": "2019-06-23T07:00:00.000Z",
+      "authors": [
+        {
+          "name": "Clark Jason Ngo"
+        }
+      ],
+      "tags": [
+        "Career",
+        "Technology"
+      ]
+    },
+    {
+      "id": "https://clarkngo.github.io/blogs/#/post/please-ask-questions-early-and-often-if-you-dont-know-how-to-do-something",
+      "url": "https://clarkngo.github.io/blogs/#/post/please-ask-questions-early-and-often-if-you-dont-know-how-to-do-something",
+      "title": "Please ask questions early and often if you don't know how to do something",
+      "content_html": "<p>Originally published on freeCodeCamp News. <a href=\"https://www.freecodecamp.org/news/cjn-please-ask-questions-early-and-often-if-you-dont-know-how-to-do-something/\">Read it there →</a><br></p>",
+      "summary": "Insights on mentorship, developer mindset, debugging workflows, and best practices for communicating blockers effectively.",
+      "date_published": "2019-06-18T07:00:00.000Z",
+      "date_modified": "2019-06-18T07:00:00.000Z",
+      "authors": [
+        {
+          "name": "Clark Jason Ngo"
+        }
+      ],
+      "tags": [
+        "Career",
+        "Engineering",
+        "Leadership"
+      ]
     }
   ]
 }

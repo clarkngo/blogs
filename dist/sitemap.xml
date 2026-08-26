@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://clarkngo.github.io/blogs</loc>
-    <lastmod>2026-08-20</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -69,6 +69,42 @@
   <url>
     <loc>https://clarkngo.github.io/blogs/#/post/ai-and-blooms-taxonomy-redefining-higher-order-thinking</loc>
     <lastmod>2025-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clarkngo.github.io/blogs/#/post/how-to-connect-amazon-ec2-using-microsoft-remote-desktop-in-macos</loc>
+    <lastmod>2020-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clarkngo.github.io/blogs/#/post/how-to-import-a-sample-database-to-your-aws-rds-microsoft-sql-server-using-s3</loc>
+    <lastmod>2020-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clarkngo.github.io/blogs/#/post/how-to-teach-yourself-to-learn-again</loc>
+    <lastmod>2019-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clarkngo.github.io/blogs/#/post/understanding-hello-world-in-nodejs</loc>
+    <lastmod>2019-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clarkngo.github.io/blogs/#/post/why-i-abandoned-my-mba-to-get-a-masters-in-computer-science</loc>
+    <lastmod>2019-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clarkngo.github.io/blogs/#/post/please-ask-questions-early-and-often-if-you-dont-know-how-to-do-something</loc>
+    <lastmod>2019-06-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
