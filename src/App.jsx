@@ -18,6 +18,12 @@ function App() {
         </main>
         <footer className="footer">
           <p>&copy; {new Date().getFullYear()} Thought Journal. All rights reserved.</p>
+          <p className="footer-credit">
+            Written by{' '}
+            <a href="https://clarkngo.github.io" target="_blank" rel="noopener noreferrer">
+              Clark Ngo
+            </a>
+          </p>
         </footer>
       </div>
     </HashRouter>

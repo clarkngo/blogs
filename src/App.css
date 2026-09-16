@@ -53,6 +53,21 @@
   letter-spacing: 0.025em;
 }
 
+.footer-credit {
+  margin-top: var(--spacing-sm);
+}
+
+.footer-credit a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-credit a:hover,
+.footer-credit a:focus-visible {
+  text-decoration: underline;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .footer {

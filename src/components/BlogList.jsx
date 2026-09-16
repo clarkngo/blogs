@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom';
-import { useMemo, useState } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
+import { useMemo } from 'react';
 import './BlogList.css';
 import SEOHead from './SEOHead';
 
 function BlogList({ posts }) {
-  const [selectedTags, setSelectedTags] = useState(new Set());
+  const [searchParams, setSearchParams] = useSearchParams();
 
   // Collect unique tags from posts
   const allTags = useMemo(() => {
@@ -13,13 +13,30 @@ function BlogList({ posts }) {
     return Array.from(set).sort();
   }, [posts]);
 
-  const toggleTag = (tag) => {
-    setSelectedTags(prev => {
-      const next = new Set(prev);
-      if (next.has(tag)) next.delete(tag);
-      else next.add(tag);
-      return next;
+  const tagLookup = useMemo(() => {
+    return new Map(allTags.map(tag => [tag.toLowerCase(), tag]));
+  }, [allTags]);
+
+  const selectedTags = useMemo(() => {
+    const next = new Set();
+    searchParams.getAll('tag').forEach(value => {
+      const match = tagLookup.get(value.toLowerCase());
+      if (match) next.add(match);
     });
+    return next;
+  }, [searchParams, tagLookup]);
+
+  const setSelectedTags = (tags) => {
+    const next = new URLSearchParams();
+    Array.from(tags).sort().forEach(tag => next.append('tag', tag));
+    setSearchParams(next, { replace: true });
+  };
+
+  const toggleTag = (tag) => {
+    const next = new Set(selectedTags);
+    if (next.has(tag)) next.delete(tag);
+    else next.add(tag);
+    setSelectedTags(next);
   };
 
   const clearFilters = () => {
