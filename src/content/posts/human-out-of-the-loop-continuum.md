@@ -2,7 +2,7 @@
 id: 10
 title: "Beyond Human-out-of-the-Loop: The Continuum of Machine Autonomy"
 date: 2026-08-09
-tags: [ai, safety, autonomy, systems, architecture]
+tags: ["AI", "Safety", "Autonomy", "Systems", "Architecture"]
 author: "Clark Ngo"
 excerpt: "From Human-in-the-Loop to recursive self-evolution — a six-stage continuum of decreasing human intervention, the latency/risk trade-off it hides, and the containment architectures that must replace the human safety gate once the human is gone."
 ---

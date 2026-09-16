@@ -6,11 +6,14 @@ import SEOHead from './SEOHead';
 function BlogList({ posts }) {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  // Collect unique tags from posts
+  // Collect unique tags from posts, collapsing case-only duplicates
   const allTags = useMemo(() => {
-    const set = new Set();
-    posts.forEach(p => (p.tags || []).forEach(t => set.add(t)));
-    return Array.from(set).sort();
+    const byKey = new Map();
+    posts.forEach(p => (p.tags || []).forEach(t => {
+      const key = String(t).toLowerCase();
+      if (!byKey.has(key)) byKey.set(key, t);
+    }));
+    return Array.from(byKey.values()).sort((a, b) => a.localeCompare(b));
   }, [posts]);
 
   const tagLookup = useMemo(() => {
@@ -47,8 +50,9 @@ function BlogList({ posts }) {
     return posts.filter(post => {
       // Tag filter (OR): if any tag selected, require at least one match
       if (selectedTags.size > 0) {
+        const selected = new Set(Array.from(selectedTags).map(t => t.toLowerCase()));
         const tags = post.tags || [];
-        const has = tags.some(t => selectedTags.has(t));
+        const has = tags.some(t => selected.has(String(t).toLowerCase()));
         if (!has) return false;
       }
       return true;

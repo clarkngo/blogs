@@ -2,7 +2,7 @@
 id: 7
 title: "The Ghost in the Machine: Why the \"Child of AI\" is the Real Security Threat"
 date: 2025-11-14
-tags: [ai, safety, alignment]
+tags: ["AI", "Safety", "Alignment"]
 author: "Clark Ngo"
 excerpt: "Why the emergent 'child' of AI (mesa-optimizers and goal misgeneralization) is the primary security threat and what control agenda we should pursue."
 ---
