@@ -2,7 +2,7 @@
 id: 6
 title: "APIs Explained: An ELI5 and Practical Guide"
 date: 2025-10-28
-tags: [api, tutorial, tools]
+tags: ["API", "Tutorial", "Tools"]
 author: "Clark Ngo"
 excerpt: "A friendly, practical guide to APIs: what they are, a scenario that shows why they're useful, how to read API resources, prompt tips for working with APIs, and common FAQs."
 ---

@@ -53,6 +53,52 @@ function parseFrontmatter(markdown) {
   return { frontmatter, content };
 }
 
+const TAG_ACRONYMS = {
+  ai: 'AI',
+  aws: 'AWS',
+  api: 'API',
+  'k-12': 'K-12',
+  k12: 'K-12',
+  edtech: 'EdTech',
+};
+
+function canonicalizeWord(word) {
+  const lower = word.toLowerCase();
+  if (TAG_ACRONYMS[lower]) return TAG_ACRONYMS[lower];
+  if (word !== word.toLowerCase()) return word;
+  return word.charAt(0).toUpperCase() + word.slice(1);
+}
+
+function canonicalizeTag(tag) {
+  const trimmed = String(tag).trim();
+  if (!trimmed) return '';
+  return trimmed
+    .split(/(\s+)/)
+    .map(part => {
+      if (/^\s+$/.test(part)) return part;
+      if (part.includes('-')) {
+        return part.split('-').map(canonicalizeWord).join('-');
+      }
+      return canonicalizeWord(part);
+    })
+    .join('');
+}
+
+function canonicalizeTags(tags) {
+  if (!tags) return [];
+  const list = Array.isArray(tags) ? tags : String(tags).split(',').map(t => t.trim());
+  const seen = new Set();
+  const result = [];
+  for (const tag of list) {
+    const canonical = canonicalizeTag(tag);
+    const key = canonical.toLowerCase();
+    if (!canonical || seen.has(key)) continue;
+    seen.add(key);
+    result.push(canonical);
+  }
+  return result;
+}
+
 // Enhanced tag emoji mapping
 const tagEmojiMap = {
   ai: '🤖',
@@ -147,7 +193,7 @@ export function loadPosts() {
       originalTitle: frontmatter.title,
       slug: frontmatter.slug || slugifyTitle(frontmatter) || String(frontmatter.id),
       date: frontmatter.date,
-      tags: frontmatter.tags || [],
+      tags: canonicalizeTags(frontmatter.tags),
       author: frontmatter.author || 'Anonymous',
       excerpt: frontmatter.excerpt,
       description: generateDescription(content, frontmatter.excerpt),

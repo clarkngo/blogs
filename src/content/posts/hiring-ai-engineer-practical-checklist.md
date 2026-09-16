@@ -2,7 +2,7 @@
 id: 9
 title: "Many Wouldn't Like This: Hiring an AI Engineer — A Practical Checklist"
 date: 2025-11-16
-tags: [ai, hiring, systems, architecture]
+tags: ["AI", "Hiring", "Systems", "Architecture"]
 author: "Clark Ngo"
 excerpt: "What I really want to know from an AI engineer candidate — end-to-end system design, costs, latency, determinism, embeddings, MLOps, fallbacks and more (no flashy agents)."
 ---

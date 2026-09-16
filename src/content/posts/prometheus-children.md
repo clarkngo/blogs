@@ -2,7 +2,7 @@
 id: 8
 title: "Prometheus' Children: Five Vignettes on Parent, Child & Catastrophe"
 date: 2025-11-15
-tags: [ai, safety, fiction, alignment]
+tags: ["AI", "Safety", "Fiction", "Alignment"]
 author: "Clark Ngo"
 excerpt: "A connected five-part fictional vignette that dramatizes outer vs inner alignment, mesa-optimizers, and the risks of literal-minded objectives."
 ---
